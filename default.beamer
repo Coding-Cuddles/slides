@@ -1,4 +1,4 @@
-\documentclass[12pt]{$documentclass$}
+\documentclass[12pt]{beamer}
 
 \usetheme{default}
 \usecolortheme{dove}
