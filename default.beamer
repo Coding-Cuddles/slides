@@ -1,0 +1,111 @@
+\documentclass[12pt]{$documentclass$}
+
+\usetheme{default}
+\usecolortheme{dove}
+\hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+
+\addtobeamertemplate{note page}{\setlength{\parskip}{12pt}}
+
+% Color and shape of bullets
+% \setbeamercolor{item}{fg=gray} 
+% \setbeamercolor{subitem}{fg=gray}
+% \setbeamercolor{itemize/enumerate subbody}{fg=gray}
+\setbeamertemplate{itemize item}{{\textendash}}
+\setbeamertemplate{itemize subitem}{{\textendash}}
+\setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
+\setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
+
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{longtable}
+% These lines are needed to make table captions work with longtable:
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+
+% Comment these out if you don't want a slide with just the
+% part/section/subsection/subsubsection title:
+\AtBeginPart{
+  \let\insertpartnumber\relax
+  \let\partname\relax
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \let\insertsectionnumber\relax
+  \let\sectionname\relax
+  \frame{\sectionpage}
+}
+\AtBeginSubsection{
+  \let\insertsubsectionnumber\relax
+  \let\subsectionname\relax
+  \frame{\subsectionpage}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+$if(title)$
+\title{$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+$if(institute)$
+\institute{$institute$}
+$endif$
+
+\begin{document}
+$if(title)$
+{
+\setbeamertemplate{footline}{}
+\frame{
+  \titlepage
+  \note{$if(titlepage-note)$$titlepage-note$$else$~$endif$}
+}
+}
+$endif$
+
+$for(include-before)$
+$include-before$
+
+$endfor$
+$if(toc)$
+\begin{frame}
+\tableofcontents[hideallsubsections]
+\end{frame}
+
+$endif$
+$body$
+
+$if(natbib)$
+$if(biblio-files)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$biblio-files$}
+
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+
+$endif$
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}
+
+% vim: ft=tex

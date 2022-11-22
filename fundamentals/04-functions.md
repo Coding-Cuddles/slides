@@ -1,4 +1,7 @@
-title: Clean Code Fundamentals: Functions
+---
+title: Clean Code Fundamentals
+subtitle: Functions
+...
 
 # Pre-work
 * Video: https://cleancoders.com/episode/clean-code-episode-3
