@@ -6,16 +6,21 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
 
       - name: Render Markdown
         uses: docker://pandoc/latex:2.19
@@ -35,14 +40,14 @@ jobs:
 
   deploy:
     needs: build
+    runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
 
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1 
+        uses: actions/deploy-pages@v1
