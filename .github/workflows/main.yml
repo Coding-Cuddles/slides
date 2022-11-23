@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
 
@@ -16,27 +17,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Convert to LaTeX
-        uses: docker://pandoc/latex:2.17.1
+      - name: Render Markdown
+        uses: docker://pandoc/latex:2.19
         with:
           args: >-
-            -f markdown
-            -t beamer
-            -o 04-functions.tex
+            --from markdown
+            --to beamer
+            --standalone
+            --output 04-functions.pdf
             fundamentals/04-functions.md
 
-      - name: Build
-        uses: dante-ev/latex-action@2021-A
-        with:
-          root_file: 04-functions.tex
-          compiler: pdflatex
+      - name: Prepare artifacts
+        run: mkdir -p _site && mv *.pdf _site/
 
-      - name: Deploy
-        run: mkdir -p public && mv cheatsheet.pdf public/
+      - name: Upload artifacts
+        uses: actions/upload-pages-artifact@v1
 
-      - name: Publish
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          force_orphan: true
+  deploy:
+    needs: build
+    if: ${{ github.ref == 'refs/heads/main' }}
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1 
