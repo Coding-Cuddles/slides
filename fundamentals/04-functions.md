@@ -43,8 +43,8 @@ subtitle: Functions
 
 # Characterization test
 * This test has many names
-  * "Characterization test" 
-  * "Golden Master" 
+  * "Characterization test"
+  * "Golden Master"
   * "Snapshot test"
 * Characterization test checks general behavior
   * Uses fixed seed for program inputs
@@ -105,7 +105,7 @@ subtitle: Functions
 * Classes hide in long functions with many local variables
 * Functions that fill the screen are likely doing more than one thing
 * Functions crossing levels of abstraction
-  
+
 # "Extract class" refactoring
 * Create characterizations test - run often
 * Extract function body to a new class's `invoke` method

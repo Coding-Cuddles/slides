@@ -22,18 +22,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
 
+      - name: Create file list
+        id: files
+        run: echo "::set-output name=files::$(printf '"%s" ' **/*.md)"
+
       - name: Render Markdown
         uses: docker://pandoc/latex:2.19
         with:
-          args: >-
-            --from markdown
-            --to beamer
-            --standalone
-            --output 04-functions.pdf
-            fundamentals/04-functions.md
+          args: --output=result.pdf ${{ steps.files_list.outputs.files }}
 
       - name: Prepare artifacts
-        run: mkdir -p _site && mv *.pdf _site/
+        run: mkdir -p _site && mv result.pdf _site/
 
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v1
