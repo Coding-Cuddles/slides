@@ -107,7 +107,7 @@ See [Google Technical Writing](https://developers.google.com/tech-writing/one) f
 | Original                                            | Revised                                 |
 |-----------------------------------------------------|-----------------------------------------|
 | There is a problem with the system.                 | The system has a problem.               |
-| There are no errors in the system.                  | The system h\as no errors.              |
+| There are no errors in the system.                  | The system has no errors.               |
 | There is a function `distribute` that assigns keys. | The `distribute` function assigns keys. |
 
 # Minimize certain adjectives
@@ -119,7 +119,7 @@ See [Google Technical Writing](https://developers.google.com/tech-writing/one) f
   * Revised: Setting this flag makes the application run 150% faster.
 
 # Write effective lists
-* Keep list items parallel 
+* Keep list items parallel
   * All items in a list should "belong" together
   * Align all items using similar
     * grammar and parts of speech
