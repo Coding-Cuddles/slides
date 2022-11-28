@@ -4,8 +4,8 @@ subtitle: Functions
 ...
 
 # Pre-work
-* Video: https://cleancoders.com/episode/clean-code-episode-3
-* Exam: https://cleancoders.com/episode/clean-code-episode-3/exam
+* Video: <https://cleancoders.com/episode/clean-code-episode-3>
+* Exam: <https://cleancoders.com/episode/clean-code-episode-3/exam>
 
 # Timetable
 | Activity   | Time   |
@@ -27,7 +27,7 @@ subtitle: Functions
 * Time limit: 10 minutes
 
 # Safe refactoring
-* Refactoring is a process of
+* **Refactoring** is a process of
   * restructuring existing code
   * without changing its external behavior
 * Safe refactoring
@@ -57,6 +57,10 @@ subtitle: Functions
 * Time limit: 10 minutes
 
 # Code smells [catalog](https://refactoring.guru/refactoring/smells)
+::: columns
+
+:::: column
+
 * Bloaters
   * Long method
   * Long parameter list
@@ -73,7 +77,10 @@ subtitle: Functions
   * Shotgun surgery
   * Parallel inheritance hierarchies
 
-# Code smells [catalog](https://refactoring.guru/refactoring/smells) cont.
+::::
+
+:::: column
+
 * Dispensables
   * Lazy class
   * Data class
@@ -87,6 +94,10 @@ subtitle: Functions
   * Incomplete library class
   * Message chains
   * Middle man
+
+::::
+
+:::
 
 # "Feature envy" code smell
 * Definition
@@ -122,6 +133,7 @@ subtitle: Functions
 # What is next?
 * Expect an e-mail with instructions for upcoming coding dojo
 
-#
-* Always leave the code better than you found it.
-  * The Software Craftsmanship Rule
+# Final words
+> Always leave the code better than you found it.
+>
+> -- <cite>The Software Craftsmanship Rule</cite>
