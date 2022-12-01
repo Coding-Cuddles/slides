@@ -118,7 +118,7 @@ subtitle: Functions
 * Functions crossing levels of abstraction
 
 # "Extract class" refactoring
-* Create characterizations test - run often
+* Create characterizations test -- run often
 * Extract function body to a new class's `invoke` method
 * Extract local variables to fields
 * Extract methods or new classes
