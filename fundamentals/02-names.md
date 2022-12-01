@@ -4,8 +4,8 @@ subtitle: Names
 ...
 
 # Pre-work
-* Video: https://cleancoders.com/episode/clean-code-episode-2
-* Exam: https://cleancoders.com/episode/clean-code-episode-2/exam
+* Video: <https://cleancoders.com/episode/clean-code-episode-2>
+* Exam: <https://cleancoders.com/episode/clean-code-episode-2/exam>
 
 # Timetable
 | Activity                   | Time   |
@@ -13,7 +13,7 @@ subtitle: Names
 | Warmup                     | 5 min  |
 | Exercise 1                 | 10 min |
 | Exercise 2                 | 10 min |
-| Intro to technical writing | 45     |
+| Intro to technical writing | 45 min |
 | Exercise 3                 | 10 min |
 | Wrap up                    | 5 min  |
 
@@ -31,7 +31,7 @@ subtitle: Names
 |---------------------|----------|----------------------------------------------|
 | `is_true`           | Function | Check if boolean statement evaluates to true |
 | `important_details` | Variable | Details that are important                   |
-| `dataType`          | Variable | Contains type of a dataset                   |
+| `dataType`          | Variable | Contains type of dataset                     |
 | `ProcessInfo`       | Class    | Structure with fields about a process        |
 | `count_if`          | Function | Count elements that satisfy a condition      |
 | `ENXIO`             | Constant | Error code for "no such device or address"   |
@@ -42,7 +42,7 @@ subtitle: Names
 # Exercise 2
 * Prompt
   * Fill-in the blanks for using different parts of speech in names
-  * Parts of speech (reference)[https://en.wikipedia.org/wiki/Part_of_speech]
+  * Parts of speech [reference](https://en.wikipedia.org/wiki/Part_of_speech)
 * Time limit: 10 minutes
 
 # Possible answers
@@ -65,13 +65,14 @@ subtitle: Names
 * Minimize certain adjectives
 * Keep list items parallel
 
-See [Google Technical Writing](https://developers.google.com/tech-writing/one) for more details
+See [Google Technical Writing](https://developers.google.com/tech-writing/one)
+for more details
 
 # Write in active voice
 * Use the active voice most of the time
   * Most readers mentally translate passive voice to active voice
-  * Active voice is easier to read
-  * Active voice is more concise
+  * It is easier to read
+  * It is more concise
 * Active voice sentence structure
   * Active voice sentence = actor + verb + target
   * Passive voice sentence = target + verb + actor
@@ -95,7 +96,7 @@ See [Google Technical Writing](https://developers.google.com/tech-writing/one) f
 | Weak verb                                   | Strong verb                                    |
 |---------------------------------------------|------------------------------------------------|
 | The exception occurs when dividing by zero. | Dividing by zero raises the exception.         |
-| This error message happens when...          | The system generate this error message when... |
+| This error message happens when...          | The system generates this error message when... |
 | We are very careful to ensure...            | We carefully ensure...                         |
 
 # Reduce the use of _there is_ and _there are_
@@ -157,6 +158,7 @@ See [Google Technical Writing](https://developers.google.com/tech-writing/one) f
 # What is next?
 * Expect an e-mail with instructions for upcoming coding dojo
 
-#
-* Always leave the code better than you found it.
-  * The Software Craftsmanship Rule
+# Final words
+> Always leave the code better than you found it.
+>
+> -- <cite>The Software Craftsmanship Rule</cite>
