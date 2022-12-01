@@ -128,7 +128,7 @@ for more details
     * capitalization
     * punctuation
 * Example of an ineffective list
-  * Parts of speech - choose well;
+  * Parts of speech -- choose well;
   * logical category is essential,
   * capitalization and punctuation
 
