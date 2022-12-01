@@ -15,7 +15,7 @@ Here you can find slides for Clean Code conversations.
 |  2 | Discussion   | [Names++](fundamentals/02-names.md) |
 |  3 | Coding Dojo  | "Change" Refactoring Kata ([Python][change-python], [C++][change-cpp]) |
 |  4 | Discussion   | [Functions](fundamentals/04-functions.md) |
-|  5 | Coding Dojo  | FizzBuzz Kata |
+|  5 | Coding Dojo  | FizzBuzz Kata ([Python][fizzbuzz-python], [C++][fizzbuzz-cpp]) |
 |  6 | Discussion   | Function Structure |
 |  7 | Coding Dojo  | Tennis Kata |
 |  8 | Discussion   | Form |
@@ -27,3 +27,5 @@ Here you can find slides for Clean Code conversations.
 
 [change-python]: https://github.com/Coding-Cuddles/change-refactoring-python-kata
 [change-cpp]: https://github.com/Coding-Cuddles/change-refactoring-cpp-kata
+[fizzbuzz-python]: https://github.com/Coding-Cuddles/fizzbuzz-python-kata
+[fizzbuzz-cpp]: https://github.com/Coding-Cuddles/fizzbuzz-cpp-kata
