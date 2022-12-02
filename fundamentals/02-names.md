@@ -46,17 +46,17 @@ subtitle: Names
 * Time limit: 10 minutes
 
 # Possible answers
-| Entity                                     | Part of speech | Example                      |
-|--------------------------------------------|----------------|------------------------------|
-| Class                                      | Noun           | `Solver`, `SupplyChain`      |
-| Variable                                   | Noun           | `transaction`, `table`       |
-| Boolean variable                           | Predicate      | `is_active`, `is_valid`      |
-| Function or method                         | Verb           | `open`, `populate_hierarchy` |
-| Function or method returning a boolean     | Predicate      | `is_empty`, `is_open`        |
-| Accessor (getter or setter)                | Verb           | `get_name`, `set_name`       |
-| Property (method pretending to be a field) | Noun           | `name`, `age`                |
-| Boolean property                           | Predicate      | `is_empty`, `is_open`        |
-| Enum (state or object descriptor)          | Adjective      | `RED`, `SWITCHABLE`          |
+| Entity                                     | Part of speech | Example                  |
+|--------------------------------------------|----------------|--------------------------|
+| Class                                      | Noun           | `Solver`, `SupplyChain`  |
+| Variable                                   | Noun           | `transaction`, `table`   |
+| Boolean variable                           | Predicate      | `is_active`, `is_valid`  |
+| Function or method                         | Verb           | `open`, `fill_hierarchy` |
+| Function or method returning a boolean     | Predicate      | `is_empty`, `is_open`    |
+| Accessor (getter or setter)                | Verb           | `get_name`, `set_name`   |
+| Property (method pretending to be a field) | Noun           | `name`, `age`            |
+| Boolean property                           | Predicate      | `is_empty`, `is_open`    |
+| Enum (state or object descriptor)          | Adjective      | `RED`, `SWITCHABLE`      |
 
 # Putting parts of speech together
 * Write in active voice
