@@ -1,7 +1,7 @@
 OUTDIR ?= _site
 MARKDOWNS := $(wildcard **/*.md)
 PDFS := $(patsubst %.md,$(OUTDIR)/%.pdf,$(MARKDOWNS))
-MDFLAGS := -f markdown -t beamer -s -V aspectratio:169 -V urlcolor:red
+MDFLAGS := -f markdown -t beamer -s -H include.tex -V aspectratio:169 -V urlcolor:red
 
 all: $(PDFS)
 
