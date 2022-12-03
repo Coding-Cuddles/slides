@@ -93,11 +93,11 @@ for more details
   * forms of be: is, are, was, were, be, being, been
   * occur, happen, take place, come about, come to pass
 
-| Weak verb                                   | Strong verb                                    |
-|---------------------------------------------|------------------------------------------------|
-| The exception occurs when dividing by zero. | Dividing by zero raises the exception.         |
+| Weak verb                                   | Strong verb                                     |
+|---------------------------------------------|-------------------------------------------------|
+| The exception occurs when dividing by zero. | Dividing by zero raises the exception.          |
 | This error message happens when...          | The system generates this error message when... |
-| We are very careful to ensure...            | We carefully ensure...                         |
+| We are very careful to ensure...            | We carefully ensure...                          |
 
 # Reduce the use of _there is_ and _there are_
 * Remove unnecessary references
