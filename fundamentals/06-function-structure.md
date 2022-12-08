@@ -4,10 +4,14 @@ subtitle: Function Structure
 ...
 
 # Pre-work
-* Video: <https://cleancoders.com/episode/clean-code-episode-4>
-* Exam: <https://cleancoders.com/episode/clean-code-episode-4/exam>
+* Video: <https://cleancoders.com/episode/clean-code-episode-6>
+* Exam: <https://cleancoders.com/episode/clean-code-episode-6/exam>
 
 # Chapters
+::: columns
+
+:::: column
+
 | Chapter                    | Time       |
 |----------------------------|------------|
 | Overview                   | `00:00:55` |
@@ -23,6 +27,13 @@ subtitle: Function Structure
 | Functional Programming     | `00:41:31` |
 | Side Effects               | `00:43:28` |
 | Command Query Separation   | `00:47:28` |
+
+::::
+
+:::: column
+
+| Chapter                    | Time       |
+|----------------------------|------------|
 | Tell, Don't Ask            | `00:51:35` |
 | Structured Programming     | `00:56:32` |
 | Early Returns              | `01:00:13` |
@@ -36,6 +47,10 @@ subtitle: Function Structure
 | Null is a Value            | `01:24:23` |
 | Trying is One Thing        | `01:27:09` |
 | Conclusion                 | `01:28:00` |
+
+::::
+
+:::
 
 # Timetable
 | Activity                   | Time   |
