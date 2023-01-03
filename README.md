@@ -18,7 +18,7 @@ Here you can find slides for Clean Code conversations.
 |   5 | Coding Dojo  | FizzBuzz Kata ([Python][fizzbuzz-python], [C++][fizzbuzz-cpp])         |
 |   6 | Discussion   | [Function Structure](fundamentals/06-function-structure.md)            |
 |   7 | Coding Dojo  | Tennis Kata                                                            |
-|   8 | Discussion   | Form                                                                   |
+|   8 | Discussion   | [Form](fundamentals/08-form.md)                                        |
 |   9 | Coding Dojo  | Bowling Kata                                                           |
 |  10 | Discussion   | TDD                                                                    |
 |  11 | Coding Dojo  | Repeat after Uncle Bob                                                 |
