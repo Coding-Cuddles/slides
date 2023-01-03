@@ -105,6 +105,8 @@ subtitle: Form
 >
 > -- <cite>The Software Craftsmanship Rule</cite>
 
+# Code-review practice
+Adopted from [Eder Diaz blog](https://ederdiaz.dev/blog/clean-code-exercises-part-1/)
 
 # Scenario 1
 ```python
