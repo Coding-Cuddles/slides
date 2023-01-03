@@ -4,8 +4,8 @@ subtitle: Function Structure
 ...
 
 # Pre-work
-* Video: <https://cleancoders.com/episode/clean-code-episode-6>
-* Exam: <https://cleancoders.com/episode/clean-code-episode-6/exam>
+* Video: <https://cleancoders.com/episode/clean-code-episode-4>
+* Exam: <https://cleancoders.com/episode/clean-code-episode-4/exam>
 
 # Chapters
 ::: columns
