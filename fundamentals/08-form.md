@@ -61,7 +61,7 @@ subtitle: Form
 # Warmup
 
 * What are your formatting preferences?
-  (e.g. tabs vs spaces, 2 spaces vs 4 spaces, snake_case vs camelCase, etc.)
+  (e.g. tabs vs spaces, 2 spaces vs 4 spaces, `snake_case` vs `camelCase`, etc.)
     * Type in the meeting chat
 
 # Exercise 1
