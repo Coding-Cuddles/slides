@@ -169,7 +169,7 @@ def get_area(shape, width, height, radius):
 class Shape(abc.ABC):
     @abc.abstractmethod
     def get_area(self):
-        pass
+        raise NotImplementedError
 
 
 class Circle(Shape):
