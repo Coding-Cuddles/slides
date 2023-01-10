@@ -17,9 +17,9 @@ Here you can find slides for Clean Code conversations.
 |   4 | Discussion   | [Functions](fundamentals/04-functions.md)                              |
 |   5 | Coding Dojo  | FizzBuzz Kata ([Python][fizzbuzz-python], [C++][fizzbuzz-cpp])         |
 |   6 | Discussion   | [Function Structure](fundamentals/06-function-structure.md)            |
-|   7 | Coding Dojo  | Tennis Kata                                                            |
+|   7 | Coding Dojo  | Tennis Kata ([Python][tennis-python], [C++][tennis-cpp])               |
 |   8 | Discussion   | [Form](fundamentals/08-form.md)                                        |
-|   9 | Coding Dojo  | Bowling Kata                                                           |
+|   9 | Coding Dojo  | Bowling Kata ([Python][bowling-python], [C++][bowling-cpp])            |
 |  10 | Discussion   | TDD                                                                    |
 |  11 | Coding Dojo  | Repeat after Uncle Bob                                                 |
 |  12 | Discussion   | "Polly wants a message"                                                |
@@ -29,3 +29,7 @@ Here you can find slides for Clean Code conversations.
 [change-cpp]: https://github.com/Coding-Cuddles/change-refactoring-cpp-kata
 [fizzbuzz-python]: https://github.com/Coding-Cuddles/fizzbuzz-python-kata
 [fizzbuzz-cpp]: https://github.com/Coding-Cuddles/fizzbuzz-cpp-kata
+[tennis-python]: https://github.com/Coding-Cuddles/tennis-python-kata
+[tennis-cpp]: https://github.com/Coding-Cuddles/tennis-cpp-kata
+[bowling-python]: https://github.com/Coding-Cuddles/bowling-python-kata
+[bowling-cpp]: https://github.com/Coding-Cuddles/bowling-cpp-kata
