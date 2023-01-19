@@ -20,7 +20,7 @@ Here you can find slides for Clean Code conversations.
 |   7 | Coding Dojo  | Tennis Kata ([Python][tennis-python], [C++][tennis-cpp])               |
 |   8 | Discussion   | [Form](fundamentals/08-form.md)                                        |
 |   9 | Coding Dojo  | Bowling Kata ([Python][bowling-python], [C++][bowling-cpp])            |
-|  10 | Discussion   | TDD                                                                    |
+|  10 | Discussion   | [TDD](fundamentals/10-tdd.md)                                          |
 |  11 | Coding Dojo  | Repeat after Uncle Bob                                                 |
 |  12 | Discussion   | "Polly wants a message"                                                |
 |  13 | Coding Dojo  | Participant choice                                                     |
