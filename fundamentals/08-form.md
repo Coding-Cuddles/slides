@@ -92,8 +92,8 @@ subtitle: Form
 * Go through scenarios 1-3
 * Suggest code improvements, and explain why
     * Use the worksheet to record your suggestions
-    * Use active voice (e.g. "introduce parameter object" instead of "parameter object should be
-      introduced")
+    * Use active voice (e.g. "introduce parameter object" instead of "parameter
+      object should be introduced")
 * Time limit: 15 minutes
 * Scenarios adopted from [Eder Diaz blog](https://ederdiaz.dev/blog/clean-code-exercises-part-1/)
 
@@ -103,6 +103,7 @@ subtitle: Form
 def can_buy_beer(age, money):
     if age >= 21 and money >= 20:
         return True
+
     return False
 ```
 
@@ -124,8 +125,13 @@ def can_buy_beer(age, money):
 
 ```python
 def should_show_image(item_index, article, show_all_images):
-    return bool(article.image_url) if item_index in (0, 1, 2) else
-    bool(article.image_url) if show_all_images else False 
+    return (
+        bool(article.image_url)
+        if item_index in (0, 1, 2)
+        else bool(article.image_url)
+        if show_all_images
+        else False
+    )
 ```
 
 Ternary operators note:
@@ -142,6 +148,7 @@ Ternary operators note:
 def should_show_image(item_index, article, show_all_images):
     is_first_three_items = item_index in (0, 1, 2)
     has_image = article.image_url is not None
+
     return (is_first_three_items or show_all_images) and has_image
 ```
 
@@ -166,6 +173,9 @@ def get_area(shape, width, height, radius):
 * Replace shape names with classes to make it less error-prone
 
 ```python
+import math
+
+
 class Shape(abc.ABC):
     @abc.abstractmethod
     def get_area(self):
@@ -187,8 +197,8 @@ class Circle(Shape):
 * Go through scenarios 4-6
 * Suggest code improvements, and explain why
     * Use the worksheet to record your suggestions
-    * Use active voice (e.g. "introduce parameter object" instead of "parameter object should be
-      introduced")
+    * Use active voice (e.g. "introduce parameter object" instead of "parameter
+      object should be introduced")
 * Time limit: 15 minutes
 
 # Scenario 4
@@ -241,11 +251,13 @@ def get_symbol(name):
 ```python
 def get_display_image(article, watermark=None):
     image = None
+
     if article["image"] and article["displayImage"]:
         if watermark:
             image = apply_watermark(article["image"], watermark)
         else:
             image = article["image"]
+
     return image
 ```
 
@@ -298,8 +310,8 @@ class Article:
 # Scenario 6
 
 ```python
-# The code checks if auth is enabled, if it's enforced, and if user already
-# registered (has email field). 
+# The code checks if auth is enabled, if it's enforced,
+# and if user already registered (has email field).
 if (
     type(AUTH_ENABLED) == str and
     AUTH_ENABLED == "true" and  # enabled!
@@ -317,6 +329,7 @@ if (
 is_auth_enabled = AUTH_ENABLED == "true"
 is_auth_enforced = is_auth_enabled and not skip_authentication
 is_registered_user = user.email is not None
+
 if is_auth_enforced and is_registered_user:
     print(f"Welcome back, {user.name}")
 ```
