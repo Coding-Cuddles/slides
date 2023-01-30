@@ -22,7 +22,7 @@ Here you can find slides for Clean Code conversations.
 |   9 | Coding Dojo  | Bowling Kata ([Python][bowling-python], [C++][bowling-cpp])            |
 |  10 | Discussion   | [TDD](fundamentals/10-tdd.md)                                          |
 |  11 | Coding Dojo  | Repeat after Uncle Bob                                                 |
-|  12 | Discussion   | "Polly wants a message"                                                |
+|  12 | Discussion   | ["Polly want a message"](12-poly.md)                                   |
 |  13 | Coding Dojo  | Participant choice                                                     |
 
 [change-python]: https://github.com/Coding-Cuddles/change-refactoring-python-kata
