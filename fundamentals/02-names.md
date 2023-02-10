@@ -4,10 +4,12 @@ subtitle: Names
 ...
 
 # Pre-work
+
 * Video: <https://cleancoders.com/episode/clean-code-episode-2>
 * Exam: <https://cleancoders.com/episode/clean-code-episode-2/exam>
 
 # Timetable
+
 | Activity                   | Time   |
 |----------------------------|--------|
 | Warmup                     | 5 min  |
@@ -18,15 +20,18 @@ subtitle: Names
 | Wrap up                    | 5 min  |
 
 # Warmup
+
 * What was the most confusing name you ever encountered?
   * Type in the meeting chat
 
 # Exercise 1
+
 * Prompt
   * Discuss a possible meaning of a variable given its name
 * Time limit: 10 minutes
 
 # Possible answers
+
 | Name                | Kind     | Meaning                                      |
 |---------------------|----------|----------------------------------------------|
 | `is_true`           | Function | Check if boolean statement evaluates to true |
@@ -40,12 +45,14 @@ subtitle: Names
 | `set`               | Class    | Collection of unique elements                |
 
 # Exercise 2
+
 * Prompt
   * Fill-in the blanks for using different parts of speech in names
   * Parts of speech [reference](https://en.wikipedia.org/wiki/Part_of_speech)
 * Time limit: 10 minutes
 
 # Possible answers
+
 | Entity                                     | Part of speech | Example                  |
 |--------------------------------------------|----------------|--------------------------|
 | Class                                      | Noun           | `Solver`, `SupplyChain`  |
@@ -59,6 +66,7 @@ subtitle: Names
 | Enum (state or object descriptor)          | Adjective      | `RED`, `SWITCHABLE`      |
 
 # Putting parts of speech together
+
 * Write in active voice
 * Choose strong verbs
 * Reduce the use of _there is_ and _there are_
@@ -69,6 +77,7 @@ See [Google Technical Writing](https://developers.google.com/tech-writing/one)
 for more details
 
 # Write in active voice
+
 * Use the active voice most of the time
   * Most readers mentally translate passive voice to active voice
   * It is easier to read
@@ -89,6 +98,7 @@ for more details
     * Sent the email is by the system.
 
 # Choose strong verbs
+
 * Reduce imprecise, weak, or generic verbs, such as the following
   * forms of be: is, are, was, were, be, being, been
   * occur, happen, take place, come about, come to pass
@@ -100,6 +110,7 @@ for more details
 | We are very careful to ensure...            | We carefully ensure...                          |
 
 # Reduce the use of _there is_ and _there are_
+
 * Remove unnecessary references
   * If possible, delete _there is_ and _there are_
   * Repair the sentence by moving the true subject and true verb
@@ -112,6 +123,7 @@ for more details
 | There is a function `distribute` that assigns keys. | The `distribute` function assigns keys. |
 
 # Minimize certain adjectives
+
 * Provide facts instead of loosely defined adjectives and adverbs
   * Adjectives and adverbs are often vague and imprecise
   * Can make the reader wonder what the writer really means
@@ -120,6 +132,7 @@ for more details
   * Revised: Setting this flag makes the application run 150% faster.
 
 # Write effective lists
+
 * Keep list items parallel
   * All items in a list should "belong" together
   * Align all items using similar
@@ -133,6 +146,7 @@ for more details
   * capitalization and punctuation
 
 # Exercise 3
+
 * Improve the following sentences
   1. The moth was removed by Grace Hopper.
   2. Performance optimization is overridden by the `--noperf` flag
@@ -141,12 +155,14 @@ for more details
 * Time limit: 10 minutes
 
 # Possible answers
+
 1. Grace Hopper removed the moth.
 2. The `--noperf` flag overrides performance optimization.
 3. The QA team discovered that the `Timer()` method contained bugs. The
    static `Timer()` method provided measurements until the bugs were discovered.
 
 # Wrap up
+
 * Choose your names thoughtfully
 * Communicate your intent
 * Avoid disinformation
@@ -156,9 +172,11 @@ for more details
 * Use The Scope Rule
 
 # What is next?
+
 * Expect an e-mail with instructions for upcoming coding dojo
 
 # Final words
+
 > Always leave the code better than you found it.
 >
 > -- <cite>The Software Craftsmanship Rule</cite>
