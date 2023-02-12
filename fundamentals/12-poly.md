@@ -58,8 +58,8 @@ subtitle: Poly want a message
 
 * Prompt
     1. How object-oriented design principles can improve (or detract) the
-      success of a project or application?
-    1. Are there any similarities or differences between OOP and TDD?
+       success of a project or application?
+    2. Are there any similarities or differences between OOP and TDD?
 * Time limit: 10 minutes
 
 # Discussion
@@ -81,7 +81,7 @@ subtitle: Poly want a message
 
 * Cons
     * If not properly applied, can lead to complex and hard-to-maintain code,
-      or overly complex class hierarchies ("Foux OO")
+      or overly complex class hierarchies ("Faux OO")
     * Not always the best fit for every type of problem or project
 
 # Exercise 2
@@ -94,14 +94,14 @@ subtitle: Poly want a message
     * Discuss the benefits and challenges of using dependency injection in
       a project that involves multiple objects that depend on each other
     * Consider the following questions:
-         1. How does dependency injection help decouple the objects in the
-            project?
-         1. What are the trade-offs of using dependency injection versus
-            creating dependencies within the objects themselves?
-         1. How does dependency injection impact the maintainability and
-            scalability of the project?
-         1. Can you think of a real-world example where dependency injection
-            would be useful?
+        1. How does dependency injection help decouple the objects in the
+           project?
+        2. What are the trade-offs of using dependency injection versus
+           creating dependencies within the objects themselves?
+        3. How does dependency injection impact the maintainability and
+           scalability of the project?
+        4. Can you think of a real-world example where dependency injection
+           would be useful?
 * Time limit: 15 minutes
 
 # Discussion
@@ -117,8 +117,8 @@ subtitle: Poly want a message
 
 * Prompt
     1. How does polymorphism make code more expressive and modular?
-    1. What are the trade-offs of using polymorphism, and how to mitigate them?
-    1. How can you test code with polymorphism, and what are the challenges?
+    2. What are the trade-offs of using polymorphism, and how to mitigate them?
+    3. How can you test code with polymorphism, and what are the challenges?
 * Time limit: 10 minutes
 
 # Discussion
@@ -140,9 +140,9 @@ subtitle: Poly want a message
       doesn't have an implementation of that message
 
 * How can you test code with polymorphism, and what are the challenges?
-    * Make sure to test the behavior of each implementation of a message
-    * Need to ensuring that the code is functioning correctly when messages are
-      sent to objects of different types
+    * Test the behavior of each implementation of a message
+    * Ensure that the code functions correctly when you send messages to objects
+      of different types
 
 # Summary
 
