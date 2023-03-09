@@ -1,6 +1,7 @@
 # Clean Code Slides
 
 [![CI](https://github.com/Coding-Cuddles/slides/actions/workflows/main.yml/badge.svg)](https://github.com/Coding-Cuddles/slides/actions/workflows/main.yml)
+[![License](https://github.com/Coding-Cuddles/slides/blob/main/LICENSE)](https://img.shields.io/github/license/Coding-Cuddles/slides)
 
 ## Overview
 
@@ -22,7 +23,7 @@ Here you can find slides for Clean Code conversations.
 |   9 | Coding Dojo  | Bowling Kata ([Python][bowling-python], [C++][bowling-cpp])            |
 |  10 | Discussion   | [TDD](fundamentals/10-tdd.md)                                          |
 |  11 | Coding Dojo  | Repeat after Uncle Bob                                                 |
-|  12 | Discussion   | ["Polly want a message"](12-poly.md)                                   |
+|  12 | Discussion   | ["Polly want a message"](fundamentals/12-polly.md)                     |
 |  13 | Coding Dojo  | Participant choice                                                     |
 
 [change-python]: https://github.com/Coding-Cuddles/change-refactoring-python-kata

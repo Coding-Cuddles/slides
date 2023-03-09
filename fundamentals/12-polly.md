@@ -1,6 +1,6 @@
 ---
 title: Clean Code Fundamentals
-subtitle: Poly want a message
+subtitle: Polly want a message
 ...
 
 # Pre-work
