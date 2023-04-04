@@ -112,7 +112,7 @@ def place_order(customer, product, quantity):
 ```
 
 # Exercise 2 solution. Continued
-```python
+```{.python .numberLines startFrom="10"}
 def calculate_order_total(product, quantity):
     return product.price * quantity
 
@@ -138,7 +138,7 @@ def send_email_confirmation(customer, order):
 ```
 
 # Exercise 3
-* Propose the code chages for the following code snippet:
+* Propose the code changes for the following code snippet:
 ```python
 class Car:
     def __init__(self, engine_size, num_doors):
@@ -147,14 +147,6 @@ class Car:
 
     def start(self):
         # code to start the car's engine
-        pass
-
-    def change_oil(self):
-        # code to change the car's oil
-        pass
-
-    def apply_brakes(self):
-        # code to apply the car's brakes
         pass
 
     def lock_doors(self):
@@ -176,11 +168,7 @@ class Car:
         self.engine = Engine()
         self.music_player = MusicPlayer()
         self.doors = DoorLocks()
-        self.oil_change = OilChange()
-```
 
-# Exercise 3 solution. Continued
-```python
 class Engine:
     def start(self):
         # code to start the car's engine
@@ -194,11 +182,6 @@ class MusicPlayer:
 class DoorLocks:
     def lock(self):
         # code to lock the car's doors
-        pass
-
-class OilChange:
-    def change(self):
-        # code to change the car's oil
         pass
 ```
 
