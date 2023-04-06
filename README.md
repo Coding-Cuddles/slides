@@ -1,7 +1,7 @@
 # Clean Code Slides
 
 [![CI](https://github.com/Coding-Cuddles/slides/actions/workflows/main.yml/badge.svg)](https://github.com/Coding-Cuddles/slides/actions/workflows/main.yml)
-[![License](https://img.shields.io/github/license/Coding-Cuddles/slides)](https://github.com/Coding-Cuddles/slides/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/Coding-Cuddles/slides)](https://github.com/Coding-Cuddles/slides/blob/main/LICENSE.txt)
 
 ## Overview
 
