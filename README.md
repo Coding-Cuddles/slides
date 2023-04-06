@@ -1,13 +1,14 @@
 # Clean Code Slides
 
 [![CI](https://github.com/Coding-Cuddles/slides/actions/workflows/main.yml/badge.svg)](https://github.com/Coding-Cuddles/slides/actions/workflows/main.yml)
-[![License](https://github.com/Coding-Cuddles/slides/blob/main/LICENSE)](https://img.shields.io/github/license/Coding-Cuddles/slides)
+[![License](https://img.shields.io/github/license/Coding-Cuddles/slides)](https://github.com/Coding-Cuddles/slides/blob/main/LICENSE)
 
 ## Overview
 
-Here you can find slides for Clean Code conversations.
+Here you can find slides for Clean Code conversations or classes.
 
 ## Curriculum
+
 ### Fundamentals (Yellow Belt)
 
 |   # | Session Type | Name                                                                   |
@@ -34,3 +35,23 @@ Here you can find slides for Clean Code conversations.
 [tennis-cpp]: https://github.com/Coding-Cuddles/tennis-cpp-kata
 [bowling-python]: https://github.com/Coding-Cuddles/bowling-python-kata
 [bowling-cpp]: https://github.com/Coding-Cuddles/bowling-cpp-kata
+
+### SOLID (Orange Belt)
+
+|   # | Session Type | Name                                                   |
+|----:|--------------|--------------------------------------------------------|
+|   1 | Discussion   | Foundations of the SOLID principles                    |
+|   2 | Discussion   | The Single Responsibility Principle                    |
+|   3 | Coding Dojo  | Gilded Rose Refactoring Kata ([Python][gilded-rose-python], [C++][gilded-rose-cpp]) |
+|   4 | Discussion   | The Open-Closed Principle                              |
+|   5 | Coding Dojo  | Kata                                                   |
+|   6 | Discussion   | The Liskov Substitution Principle                      |
+|   7 | Coding Dojo  | Kata                                                   |
+|   8 | Discussion   | The Interface Segregation Principle                    |
+|   9 | Coding Dojo  | Kata                                                   |
+|  10 | Discussion   | The Dependency Inversion Principle                     |
+|  11 | Coding Dojo  | Kata                                                   |
+
+[gilded-rose-python]: https://github.com/Coding-Cuddles/gilded-rose-refactoring-python-kata
+[gilded-rose-cpp]: https://github.com/Coding-Cuddles/gilded-rose-refactoring-cpp-kata
+
