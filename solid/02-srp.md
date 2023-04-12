@@ -21,15 +21,15 @@ subtitle: The Single Responsibility Principle
 
 # Warmup
 
-* Have you ever encountered difficulty in crafting a unit test for your code? 
+* Have you ever encountered difficulty in crafting a unit test for your code?
   What was causing these problems?
     * Type in the meeting chat
 
 # Responsibility
-* Responsibility that your software has is the responsibility to serve different groups of 
+* Responsibility that your software has is the responsibility to serve different groups of
   customers who consumes those services.
 * Responsibility is the source of change.
-* To find responsibilities, find families of functions with the similar 
+* To find responsibilities, find families of functions with the similar
   audience/users requesting changes.
 
 # Roles
@@ -38,7 +38,7 @@ subtitle: The Single Responsibility Principle
 * Actor - single source of change
 
 # Two values of software
-1. Ability to change frequently - primary value 
+1. Ability to change frequently - primary value
 2. Expected behavior - secondary value
 
 # Exercise 1
@@ -48,11 +48,10 @@ subtitle: The Single Responsibility Principle
     * Rooms 2, 6, 10: What to do if class has multiple functions? Are all of them a separate responsibility?
     * Rooms 3, 7, 11: How users/actors/responsibilities correlate? Are they the same? Could they differ?
     * Rooms 4, 8, 12: Provide example of same and different combinations of users/actors/responsibilities.
-    * 
 * Time limit: 10 minutes
 
+# SRP
 
-# SRP 
 Module should have one and only one reason to change (responsibility)
 
 * How to design software:
@@ -62,16 +61,16 @@ Module should have one and only one reason to change (responsibility)
   * Structure the software so that responsibilities became a plugins to the rest of the application
   * Separate source files
 
-
 # Exercise 2
 
 * Code review practice
 * Use the worksheet
-* Based on the code below suggest code improvements, explain why. 
-Use the worksheet to record your suggestions
+* Based on the code below suggest code improvements, explain why.
+  Use the worksheet to record your suggestions
 * Time limit: 10 minutes
 
-# Exercise 2. Code for review
+# Exercise 2 code for review
+
 ```python
 def place_order(customer, product, quantity):
     # Calculate the order total
@@ -92,53 +91,64 @@ def place_order(customer, product, quantity):
 
         # Send an email confirmation to the customer
         email.send_confirmation_email(customer.email, order)
-
         return order
     else:
         raise ValueError("Insufficient credit")
 ```
 
-# Exercise 2 solution.
+# Exercise 2 solution
+
 ```python
 def place_order(customer, product, quantity):
     order_total = calculate_order_total(product, quantity)
     check_customer_credit(customer, order_total)
     reduce_customer_credit(customer, order_total)
+
     order = create_order(customer, product, quantity, order_total)
     add_order_to_database(order)
     update_product_inventory(product, quantity)
     send_email_confirmation(customer, order)
-    return order
-```
 
-# Exercise 2 solution. Continued
-```{.python .numberLines startFrom="10"}
+    return order
+
+
 def calculate_order_total(product, quantity):
     return product.price * quantity
+
 
 def check_customer_credit(customer, order_total):
     if customer.credit < order_total:
         raise ValueError("Insufficient credit")
+ ```
 
+# Exercise 2 solutioni (cont'd)
+
+```python
 def reduce_customer_credit(customer, order_total):
     customer.credit -= order_total
+
 
 def create_order(customer, product, quantity, order_total):
     return Order(customer=customer, product=product, quantity=quantity, total=order_total)
 
+
 def add_order_to_database(order):
     db.add_order(order)
+
 
 def update_product_inventory(product, quantity):
     product.inventory -= quantity
     db.update_product(product)
+
 
 def send_email_confirmation(customer, order):
     email.send_confirmation_email(customer.email, order)
 ```
 
 # Exercise 3
+
 * Propose the code changes for the following code snippet:
+
 ```python
 class Car:
     def __init__(self, engine_size, num_doors):
@@ -147,42 +157,39 @@ class Car:
 
     def start(self):
         # code to start the car's engine
-        pass
 
     def lock_doors(self):
         # code to lock the car's doors
-        pass
 
     def play_music(self):
         # code to play music in the car
-        pass
 ```
 
 # Exercise 3 solution
+
 ```python
 class Car:
     def __init__(self, engine_size, num_doors):
         self.engine_size = engine_size
         self.num_doors = num_doors
-
         self.engine = Engine()
         self.music_player = MusicPlayer()
         self.doors = DoorLocks()
 
+
 class Engine:
     def start(self):
         # code to start the car's engine
-        pass
+
 
 class MusicPlayer:
     def play_music(self):
         # code to play music in the car
-        pass
+
 
 class DoorLocks:
     def lock(self):
         # code to lock the car's doors
-        pass
 ```
 
 # Discussion
@@ -195,7 +202,7 @@ class DoorLocks:
 * Potential solutions:
   * Dependency inversion
   * Extract classes
-  * Facade pattern 
+  * Facade pattern
   * Interface segregation
 * None of the solution are perfect
 * Carefully allocating responsibilities to classes and modules we keep the primary value of software high
@@ -204,11 +211,11 @@ class DoorLocks:
 # What is next?
 
 * Next session
-    * Coding dojo to practice SRP 
+  * Coding dojo to practice SRP
 * Expect an e-mail with instructions for upcoming coding dojo
 
 # Final words
 
-:> Always leave the code better than you found it.
+> Always leave the code better than you found it.
 >
 > -- <cite>The Software Craftsmanship Rule</cite>
