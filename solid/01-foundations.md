@@ -1,10 +1,7 @@
-[//]: # (---)
-
-[//]: # (title: Clean Code SOLID Principles)
-
-[//]: # (subtitle: Foundations of the SOLID Principles)
-
-[//]: # (...)
+---
+title: Clean Code SOLID
+subtitle: Foundations of the SOLID Principles
+...
 
 # Pre-work
 
