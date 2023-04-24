@@ -9,6 +9,54 @@ subtitle: The Single Responsibility Principle
 * Exam: <https://cleancoders.com/episode/clean-code-episode-9/exam>
 
 
+# Chapters
+
+Timing for chapters in the downloaded version of the video.
+
+::: columns
+
+:::: column
+
+| Chapter                    | Time     |
+|----------------------------|----------|
+| Overview                   | 00:01:01 |
+| General Relativity         | 00:03:54 |
+| Responsibility             | 00:10:05 |
+| It's About Users           | 00:12:50 |
+| It's About Roles           | 00:14:37 |
+| Reprise                    | 00:15:50 |
+| The Two Values of Software | 00:16:19 |
+| Friction                   | 00:20:01 |
+| CM Collision               | 00:20:58 |
+| Fan Out                    | 00:22:41 |
+| Colocation is Coupling     | 00:24:15 |
+| Encroaching Fragility      | 00:26:49 |
+| SRP                        | 00:27:51 |
+
+::::
+
+:::: column
+
+| Chapter                | Time     |
+|------------------------|----------|
+| Examples               | 00:30:12 |
+| Conclusion             | 00:39:58 |
+| Solutions              | 00:41:15 |
+| Invert Dependencies    | 00:41:38 |
+| Extract Classes        | 00:42:45 |
+| Facade                 | 00:44:05 |
+| Interface Segregation  | 00:45:02 |
+| Welcome to Engineering | 00:45:53 |
+| Case Study             | 00:48:06 |
+| Architecture           | 00:53:47 |
+| Design                 | 00:55:20 |
+| Faking it              | 00:57:01 |
+| Conclusion             | 01:00:14 |
+
+::::
+
+:::
+
 # Timetable
 
 | Activity   | Time   |
