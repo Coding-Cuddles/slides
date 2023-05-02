@@ -40,7 +40,7 @@ Here you can find slides for Clean Code conversations or classes.
 
 |   # | Session Type | Name                                                   |
 |----:|--------------|--------------------------------------------------------|
-|   1 | Discussion   | [Foundations of the SOLID principles](solid/01-foundations.md)                 |
+|   1 | Discussion   | [Foundations of the SOLID principles](solid/01-foundations.md) |
 |   2 | Discussion   | [The Single Responsibility Principle](solid/02-srp.md) |
 |   3 | Coding Dojo  | Gilded Rose Refactoring Kata ([Python][gilded-rose-python], [C++][gilded-rose-cpp]) |
 |   4 | Discussion   | The Open-Closed Principle                                                           |
