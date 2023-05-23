@@ -38,20 +38,22 @@ Here you can find slides for Clean Code conversations or classes.
 
 ### SOLID (Orange Belt)
 
-|   # | Session Type | Name                                                   |
-|----:|--------------|--------------------------------------------------------|
-|   1 | Discussion   | [Foundations of the SOLID principles](solid/01-foundations.md) |
-|   2 | Discussion   | [The Single Responsibility Principle](solid/02-srp.md) |
-|   3 | Coding Dojo  | Gilded Rose Refactoring Kata ([Python][gilded-rose-python], [C++][gilded-rose-cpp]) |
-|   4 | Discussion   | The Open-Closed Principle                                                           |
-|   5 | Coding Dojo  | Kata                                                                                |
-|   6 | Discussion   | The Liskov Substitution Principle                                                   |
-|   7 | Coding Dojo  | Kata                                                                                |
-|   8 | Discussion   | The Interface Segregation Principle                                                 |
-|   9 | Coding Dojo  | Kata                                                                                |
-|  10 | Discussion   | The Dependency Inversion Principle                                                  |
-|  11 | Coding Dojo  | Kata                                                                                |
+|  # | Session Type | Name                                                   |
+|---:|--------------|--------------------------------------------------------|
+|  1 | Discussion   | [Foundations of the SOLID principles](solid/01-foundations.md) |
+|  2 | Discussion   | [The Single Responsibility Principle](solid/02-srp.md) |
+|  3 | Coding Dojo  | Gilded Rose Refactoring Kata ([Python][gilded-rose-python], [C++][gilded-rose-cpp]) |
+|  4 | Discussion   | The Dependency Inversion Principle                                                  |
+|  5 | Coding Dojo  | Smart Home Refactoring Kata ([Python][smart-home-python], [C++][smart-home-cpp])    |
+|  6 | Discussion   | The Interface Segregation Principle                                                 |
+|  7 | Coding Dojo  | Kata                                                                                |
+|  8 | Discussion   | The Open-Closed Principle                                                           |
+|  9 | Coding Dojo  | Kata                                                                                |
+| 10 | Discussion   | The Liskov Substitution Principle                                                   |
+| 11 | Coding Dojo  | Kata                                                                                |
 
 [gilded-rose-python]: https://github.com/Coding-Cuddles/gilded-rose-refactoring-python-kata
 [gilded-rose-cpp]: https://github.com/Coding-Cuddles/gilded-rose-refactoring-cpp-kata
+[smart-home-python]: https://github.com/Coding-Cuddles/smart-home-refactoring-python-kata
+[smart-home-cpp]: https://github.com/Coding-Cuddles/smart-home-refactoring-cpp-kata
 
