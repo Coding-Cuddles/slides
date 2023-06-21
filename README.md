@@ -46,9 +46,9 @@ Here you can find slides for Clean Code conversations or classes.
 |  4 | Discussion   | The Dependency Inversion Principle                                                  |
 |  5 | Coding Dojo  | Smart Home Refactoring Kata ([Python][smart-home-python], [C++][smart-home-cpp])    |
 |  6 | Discussion   | The Interface Segregation Principle                                                 |
-|  7 | Coding Dojo  | Kata                                                                                |
+|  7 | Coding Dojo  | Media Player Refactoring Kata ([Python][media-player-python], [C++][media-player-cpp]) |
 |  8 | Discussion   | The Open-Closed Principle                                                           |
-|  9 | Coding Dojo  | Kata                                                                                |
+|  9 | Coding Dojo  | Expense Report Refactoring Kata ([Python][expense-report-python], [C++][expense-report-cpp]) |
 | 10 | Discussion   | The Liskov Substitution Principle                                                   |
 | 11 | Coding Dojo  | Kata                                                                                |
 
@@ -56,4 +56,8 @@ Here you can find slides for Clean Code conversations or classes.
 [gilded-rose-cpp]: https://github.com/Coding-Cuddles/gilded-rose-refactoring-cpp-kata
 [smart-home-python]: https://github.com/Coding-Cuddles/smart-home-refactoring-python-kata
 [smart-home-cpp]: https://github.com/Coding-Cuddles/smart-home-refactoring-cpp-kata
+[media-player-python]: https://github.com/Coding-Cuddles/media-player-refactoring-python-kata
+[media-player-cpp]: https://github.com/Coding-Cuddles/media-player-refactoring-cpp-kata
+[expense-report-python]: https://github.com/Coding-Cuddles/expense-report-refactoring-python-kata
+[expense-report-cpp]: https://github.com/Coding-Cuddles/expense-report-refactoring-cpp-kata
 
