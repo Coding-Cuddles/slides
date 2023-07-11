@@ -50,7 +50,7 @@ Here you can find slides for Clean Code conversations or classes.
 |  8 | Discussion   | The Open-Closed Principle                                                           |
 |  9 | Coding Dojo  | Expense Report Refactoring Kata ([Python][expense-report-python], [C++][expense-report-cpp]) |
 | 10 | Discussion   | The Liskov Substitution Principle                                                   |
-| 11 | Coding Dojo  | Kata                                                                                |
+| 11 | Coding Dojo  | Game of Life Refactoring Kata ([Python][game-of-life-python], [C++][game-of-life-cpp]) |
 
 [gilded-rose-python]: https://github.com/Coding-Cuddles/gilded-rose-refactoring-python-kata
 [gilded-rose-cpp]: https://github.com/Coding-Cuddles/gilded-rose-refactoring-cpp-kata
@@ -60,4 +60,6 @@ Here you can find slides for Clean Code conversations or classes.
 [media-player-cpp]: https://github.com/Coding-Cuddles/media-player-refactoring-cpp-kata
 [expense-report-python]: https://github.com/Coding-Cuddles/expense-report-refactoring-python-kata
 [expense-report-cpp]: https://github.com/Coding-Cuddles/expense-report-refactoring-cpp-kata
+[game-of-life-python]: https://github.com/Coding-Cuddles/game-of-life-refactoring-python-kata
+[game-of-life-cpp]: https://github.com/Coding-Cuddles/game-of-life-refactoring-cpp-kata
 
