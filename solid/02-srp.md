@@ -177,7 +177,7 @@ subtitle: The Single Responsibility Principle
 
 * Time limit: 10 minutes
 
-# Definitions 
+# Definitions
 
 * Actor - single source of change
     * Roles
