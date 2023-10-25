@@ -1,12 +1,26 @@
 ---
 title: Clean Code Fundamentals
-subtitle: Names
+subtitle: Names++
 ...
 
 # Pre-work
 
 * Video: <https://cleancoders.com/episode/clean-code-episode-2>
 * Exam: <https://cleancoders.com/episode/clean-code-episode-2/exam>
+
+# Chapters
+
+| Chapter                    | Time     |
+|----------------------------|----------|
+| Reveal Your Intent         | 00:00:42 |
+| Describe the Problem       | 00:04:24 |
+| Avoid Disinformation       | 00:08:19 |
+| Pronouncable Names         | 00:13:24 |
+| Avoid Encodings            | 00:16:36 |
+| Parts of Speech            | 00:20:01 |
+| The Scope Lengh Rule       | 00:25:06 |
+| Recap & Conclusion         | 00:31:39 |
+| Distance to the Sun        | 00:36:07 |
 
 # Timetable
 
