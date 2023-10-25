@@ -67,9 +67,9 @@ Here you can find slides for Clean Code conversations or classes.
 
 |  # | Session Type | Name                                                                             |
 |---:|--------------|----------------------------------------------------------------------------------|
-|  1 | Discussion   | Advanced TDD                                                                     |
+|  1 | Discussion   | [Advanced TDD](advanced-tdd/01-advanced-tdd.md)                                  |
 |  2 | Coding Dojo  | Roman Numerals Kata ([Python][roman-numerals-python], [C++][roman-numerals-cpp]) |
-|  3 | Discussion   | Clean Tests                                                                      |
+|  3 | Discussion   | [Clean Tests](advanced-tdd/03-clean-tests.md)                                    |
 |  4 | Coding Dojo  |                                                                                  |
 |  5 | Discussion   | Test Design                                                                      |
 |  6 | Coding Dojo  |                                                                                  |
