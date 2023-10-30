@@ -70,7 +70,7 @@ Here you can find slides for Clean Code conversations or classes.
 |  1 | Discussion   | [Advanced TDD](advanced-tdd/01-advanced-tdd.md)                                  |
 |  2 | Coding Dojo  | Roman Numerals Kata ([Python][roman-numerals-python], [C++][roman-numerals-cpp]) |
 |  3 | Discussion   | [Clean Tests](advanced-tdd/03-clean-tests.md)                                    |
-|  4 | Coding Dojo  |                                                                                  |
+|  4 | Coding Dojo  | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-python])          |
 |  5 | Discussion   | Test Design                                                                      |
 |  6 | Coding Dojo  |                                                                                  |
 |  7 | Discussion   | Test Process                                                                     |
@@ -82,3 +82,5 @@ Here you can find slides for Clean Code conversations or classes.
 
 [roman-numerals-python]: https://github.com/Coding-Cuddles/roman-numerals-python-kata
 [roman-numerals-cpp]: https://github.com/Coding-Cuddles/roman-numerals-cpp-kata
+[mars-rover-python]: https://github.com/Coding-Cuddles/mars-rover-python-kata
+[mars-rover-cpp]: https://github.com/Coding-Cuddles/mars-rover-cpp-kata
