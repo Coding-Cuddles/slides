@@ -71,10 +71,10 @@ Here you can find slides for Clean Code conversations or classes.
 |  2 | Coding Dojo  | Roman Numerals Kata ([Python][roman-numerals-python], [C++][roman-numerals-cpp]) |
 |  3 | Discussion   | [Clean Tests](advanced-tdd/03-clean-tests.md)                                    |
 |  4 | Coding Dojo  | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-python])          |
-|  5 | Discussion   | Test Design                                                                      |
-|  6 | Coding Dojo  |                                                                                  |
-|  7 | Discussion   | Test Process                                                                     |
-|  8 | Coding Dojo  |                                                                                  |
+|  5 | Coding Mob   | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-python])          |
+|  6 | Discussion   | Test Design / Test Process                                                       |
+|  7 | Coding Dojo  | Hyper-optimized Telemetry Kata ([Python][hyper-optimized-telemetry-python], [C++][hyper-optimized-telemetry-cpp]) |
+|  8 | Discussion   | Student Code Demo                                                                |
 |  9 | Discussion   | Mocking                                                                          |
 | 10 | Coding Dojo  |                                                                                  |
 | 11 | Discussion   | Transformation Priority Premise                                                  |
@@ -84,3 +84,5 @@ Here you can find slides for Clean Code conversations or classes.
 [roman-numerals-cpp]: https://github.com/Coding-Cuddles/roman-numerals-cpp-kata
 [mars-rover-python]: https://github.com/Coding-Cuddles/mars-rover-python-kata
 [mars-rover-cpp]: https://github.com/Coding-Cuddles/mars-rover-cpp-kata
+[hyper-optimized-telemetry-python]: https://github.com/Coding-Cuddles/hyper-optimized-telemetry-python-kata
+[hyper-optimized-telemetry-cpp]: https://github.com/Coding-Cuddles/hyper-optimized-telemetry-cpp-kata
