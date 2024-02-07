@@ -76,9 +76,10 @@ Here you can find slides for Clean Code conversations or classes.
 |  7 | Coding Dojo  | Hyper-optimized Telemetry Kata ([Python][hyper-optimized-telemetry-python], [C++][hyper-optimized-telemetry-cpp]) |
 |  8 | Discussion   | Student Code Demo                                                                |
 |  9 | Discussion   | Mocking                                                                          |
-| 10 | Coding Dojo  |                                                                                  |
+| 10 | Coding Dojo  | Tire Pressure Monitoring Kata ([Python][tire-pressure-kata-python], [C++][tire-pressure-kata-cpp]) |
 | 11 | Discussion   | Transformation Priority Premise                                                  |
-| 12 | Coding Dojo  |                                                                                  |
+| 12 | Coding Dojo  | "99 Bottles of Beer" Kata ([Python][99-bottles-kata-python], [C++][99-bottles-kata-cpp]) |
+| 13 | Discussion   | Student Code Demo 2                                                              |
 
 [roman-numerals-python]: https://github.com/Coding-Cuddles/roman-numerals-python-kata
 [roman-numerals-cpp]: https://github.com/Coding-Cuddles/roman-numerals-cpp-kata
@@ -86,3 +87,7 @@ Here you can find slides for Clean Code conversations or classes.
 [mars-rover-cpp]: https://github.com/Coding-Cuddles/mars-rover-cpp-kata
 [hyper-optimized-telemetry-python]: https://github.com/Coding-Cuddles/hyper-optimized-telemetry-python-kata
 [hyper-optimized-telemetry-cpp]: https://github.com/Coding-Cuddles/hyper-optimized-telemetry-cpp-kata
+[tire-pressure-kata-python]: https://github.com/Coding-Cuddles/tire-pressure-monitoring-python-kata
+[tire-pressure-kata-cpp]: https://github.com/Coding-Cuddles/tire-pressure-monitoring-cpp-kata
+[99-bottles-kata-python]: https://github.com/Coding-Cuddles/99-bottles-of-beer-python-kata
+[99-bottles-kata-cpp]: https://github.com/Coding-Cuddles/99-bottles-of-beer-cpp-kata
