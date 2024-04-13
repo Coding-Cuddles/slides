@@ -18,7 +18,7 @@ Here you can find slides for Clean Code conversations or classes.
 |   3 | Coding Dojo  | "Change" Refactoring Kata ([Python][change-python], [C++][change-cpp]) |
 |   4 | Discussion   | [Functions](fundamentals/04-functions.md#warmup)                       |
 |   5 | Coding Dojo  | FizzBuzz Kata ([Python][fizzbuzz-python], [C++][fizzbuzz-cpp])         |
-|   6 | Discussion   | [Function Structure](fun fundamentals/06-function-structure.md)        |
+|   6 | Discussion   | [Function Structure](fundamentals/06-function-structure.md#warmup)     |
 |   7 | Coding Dojo  | Tennis Kata ([Python][tennis-python], [C++][tennis-cpp])               |
 |   8 | Discussion   | [Form](fundamentals/08-form.md#warmup)                                 |
 |   9 | Coding Dojo  | Bowling Kata ([Python][bowling-python], [C++][bowling-cpp])            |
@@ -71,7 +71,7 @@ Here you can find slides for Clean Code conversations or classes.
 |   2 | Coding Dojo  | Roman Numerals Kata ([Python][roman-numerals-python], [C++][roman-numerals-cpp])                                  |
 |   3 | Discussion   | [Clean Tests](advanced-tdd/03-clean-tests.md#warmup)                                                              |
 |   4 | Coding Dojo  | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-python])                                           |
-|   5 | Coding Mob   | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-python])                                           |
+|   5 | Coding Mob   | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-cpp])                                              |
 |   6 | Discussion   | Test Design / Test Process                                                                                        |
 |   7 | Coding Dojo  | Hyper-optimized Telemetry Kata ([Python][hyper-optimized-telemetry-python], [C++][hyper-optimized-telemetry-cpp]) |
 |   8 | Discussion   | Student Code Demo                                                                                                 |
