@@ -5,8 +5,8 @@ subtitle: Form
 
 # Pre-work
 
-* Video: <https://cleancoders.com/episode/clean-code-episode-5>
-* Exam: <https://cleancoders.com/episode/clean-code-episode-5/exam>
+- Video: <https://cleancoders.com/episode/clean-code-episode-5>
+- Exam: <https://cleancoders.com/episode/clean-code-episode-5/exam>
 
 # Chapters
 
@@ -15,7 +15,7 @@ subtitle: Form
 :::: column
 
 | Chapter                 | Time     |
-|-------------------------|----------|
+| ----------------------- | -------- |
 | Overview                | 00:00:51 |
 | Sol's Pyre              | 00:03:57 |
 | Comments                | 00:11:12 |
@@ -32,7 +32,7 @@ subtitle: Form
 :::: column
 
 | Chapter                | Time     |
-|------------------------|----------|
+| ---------------------- | -------- |
 | Formatting             | 00:33:23 |
 | File Size              | 00:34:23 |
 | Vertical Formatting    | 00:37:35 |
@@ -51,7 +51,7 @@ subtitle: Form
 # Timetable
 
 | Activity   | Time   |
-|------------|--------|
+| ---------- | ------ |
 | Warmup     | 5 min  |
 | Exercise 1 | 20 min |
 | Exercise 2 | 20 min |
@@ -60,42 +60,42 @@ subtitle: Form
 
 # Warmup
 
-* What are your formatting preferences?
-  (e.g. tabs vs spaces, 2 spaces vs 4 spaces, `snake_case` vs `camelCase`, etc.)
-    * Type in the meeting chat
+- What are your formatting preferences? (e.g., tabs vs spaces,
+  2 spaces vs 4 spaces, `snake_case` vs `camelCase`, etc.)
+  - Type in the meeting chat
 
 # Exercise 1
 
-* Prompt
-    * Compare classes and data structures
-* Time limit: 10 minutes
+- Prompt
+  - Compare classes and data structures
+- Time limit: 10 minutes
 
 # Possible answer
 
-* Classes
-    * Cohesive data and functions that operate on that data
-    * Private data, public functions
-    * Tell, don't ask
-    * Polymorphism
-    * Protects from new types, exposes to new methods
-* Data Structures
-    * Cohesive data, simple functions like getters and setters
-    * Public data
-    * Ask, don't tell
-    * Switch statements
-    * Protects from new methods, exposes to new types
+- Classes
+  - Cohesive data and functions that operate on that data
+  - Private data, public functions
+  - Tell, don't ask
+  - Polymorphism
+  - Protects from new types, exposes to new methods
+- Data Structures
+  - Cohesive data, simple functions like getters and setters
+  - Public data
+  - Ask, don't tell
+  - Switch statements
+  - Protects from new methods, exposes to new types
 
 # Exercise 2
 
-* Code-review practice (part 1)
-* Use the worksheet
-* Go through scenarios 1-3
-* Suggest code improvements, and explain why
-    * Use the worksheet to record your suggestions
-    * Use active voice (e.g. "introduce parameter object" instead of "parameter
-      object should be introduced")
-* Time limit: 15 minutes
-* Scenarios adopted from [Eder Diaz blog](https://ederdiaz.dev/blog/clean-code-exercises-part-1/)
+- Code-review practice (part 1)
+- Use the worksheet
+- Go through scenarios 1-3
+- Suggest code improvements, and explain why
+  - Use the worksheet to record your suggestions
+  - Use active voice (e.g., "introduce parameter object" instead of "parameter
+    object should be introduced")
+- Time limit: 15 minutes
+- Scenarios adopted from [Eder Diaz blog](https://ederdiaz.dev/blog/clean-code-exercises-part-1/)
 
 # Scenario 1
 
@@ -109,8 +109,8 @@ def can_buy_beer(age, money):
 
 # Scenario 1 solution
 
-* Introduce constants to clarify the *magic numbers*
-* Collapse if-statement when evaluating boolean expressions
+- Introduce constants to clarify the _magic numbers_
+- Collapse if-statement when evaluating boolean expressions
 
 ```python
 LEGAL_DRINKING_AGE = 21
@@ -136,13 +136,13 @@ def should_show_image(item_index, article, show_all_images):
 
 Ternary operators note:
 
-* C++: `condition ? a : b`
-* Python: `a if condition else b`
+- C++: `condition ? a : b`
+- Python: `a if condition else b`
 
 # Scenario 2 solution
 
-* Use explanatory variables to clarify sub-expressions
-* Remove code duplication
+- Use explanatory variables to clarify sub-expressions
+- Remove code duplication
 
 ```python
 def should_show_image(item_index, article, show_all_images):
@@ -169,8 +169,8 @@ def get_area(shape, width, height, radius):
 
 # Scenario 3 solution
 
-* Introduce polymorphism to protect from new shapes
-* Replace shape names with classes to make it less error-prone
+- Introduce polymorphism to protect from new shapes
+- Replace shape names with classes to make it less error-prone
 
 ```python
 import abc
@@ -193,14 +193,14 @@ class Circle(Shape):
 
 # Exercise 3
 
-* Code-review practice (part 2)
-* Use the worksheet
-* Go through scenarios 4-6
-* Suggest code improvements, and explain why
-    * Use the worksheet to record your suggestions
-    * Use active voice (e.g. "introduce parameter object" instead of "parameter
-      object should be introduced")
-* Time limit: 15 minutes
+- Code-review practice (part 2)
+- Use the worksheet
+- Go through scenarios 4-6
+- Suggest code improvements, and explain why
+  - Use the worksheet to record your suggestions
+  - Use active voice (e.g. "introduce parameter object" instead of "parameter
+    object should be introduced")
+- Time limit: 15 minutes
 
 # Scenario 4
 
@@ -224,8 +224,8 @@ def get_symbol(name):
 
 # Scenario 4 solution
 
-* Introduce error handling
-* Use PEP8 naming conventions
+- Introduce error handling
+- Use PEP8 naming conventions
 
 ```python
 class SymbolNotFoundError(Exception):
@@ -264,8 +264,8 @@ def get_display_image(article, watermark=None):
 
 # Scenario 5 solution 1
 
-* Use early return to separate main logic from corner cases
-* Use separate function for `watermark=None` argument
+- Use early return to separate main logic from corner cases
+- Use separate function for `watermark=None` argument
 
 ```python
 def has_image_and_display_image(article):
@@ -286,7 +286,7 @@ def get_display_image(article):
 
 # Scenario 5 solution 2
 
-* Introduce a class
+- Introduce a class
 
 ```python
 class Article:
@@ -314,17 +314,17 @@ class Article:
 # The code checks if auth is enabled, if it's enforced,
 # and if user already registered (has email field).
 if (
-    type(AUTH_ENABLED) == str and
-    AUTH_ENABLED == "true" and  # enabled!
-    not skip_authentication and  # enforced!!
-    user.email  # already registered!!!
+    type(AUTH_ENABLED) == str
+    and AUTH_ENABLED == "true"  # enabled!
+    and not skip_authentication  # enforced!!
+    and user.email  # already registered!!!
 ):
     print(f"Welcome back, {user.name}")
 ```
 
 # Scenario 6 solution
 
-* Replace comments with explanatory variables
+- Replace comments with explanatory variables
 
 ```python
 is_auth_enabled = AUTH_ENABLED == "true"
@@ -337,14 +337,14 @@ if is_auth_enforced and is_registered_user:
 
 # Summary
 
-* Comments
-* Formatting
-* Classes vs data structures
-* Abstraction boundaries
+- Comments
+- Formatting
+- Classes vs data structures
+- Abstraction boundaries
 
 # What is next?
 
-* Expect an e-mail with instructions for upcoming coding dojo
+- Expect an e-mail with instructions for upcoming coding dojo
 
 # Final words
 
