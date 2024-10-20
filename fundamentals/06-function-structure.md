@@ -84,7 +84,7 @@ subtitle: Function Structure
 - Avoid "output" arguments
 - Avoid passing boolean values and null
 - Limit the use of switch statements to top-level factory functions
-- Limit the interdependencies by using the principle of the least knowledge
+- Limit the inter-dependencies by using the principle of the least knowledge
 - "Pass a block" to solve the temporal coupling problem
 - Use early returns to reduce the nesting level
 - Avoid breaks/returns in a middle of a loop
@@ -127,7 +127,7 @@ subtitle: Function Structure
   - Avoid passing boolean values and null
 - Reduce coupling
   - Limit the use of switch statements to top-level factory functions
-  - Limit the interdependencies by using the principle of the least knowledge
+  - Limit the inter-dependencies by using the principle of the least knowledge
   - "Pass a block" to solve the temporal coupling problem
 - Clarify control flow
   - Use early returns to reduce the nesting level
@@ -161,12 +161,12 @@ subtitle: Function Structure
 # Summary
 
 - Simplify function signature
-  - Function signature should be small - 3 or less arguments
+  - Function signature should be small -- 3 or less arguments
   - Avoid "output" arguments
   - Avoid passing boolean values and null
 - Reduce coupling
   - Limit the use of switch statements to top-level factory functions
-  - Limit the interdependencies by using the principle of the least knowledge
+  - Limit the inter-dependencies by using the principle of the least knowledge
   - "Pass a block" to solve the temporal coupling problem
 - Clarify control flow
   - Use early returns to reduce the nesting level

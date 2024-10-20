@@ -33,8 +33,8 @@ subtitle: Functions
 # Safe refactoring
 
 - **Refactoring** is a process of
-  - restructuring existing code
-  - without changing its external behavior
+  - Restructuring existing code
+  - Without changing its external behavior
 - Safe refactoring
   - Put the system under a test
   - Run tests often
