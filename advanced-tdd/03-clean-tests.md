@@ -24,11 +24,11 @@ subtitle: Clean Tests
 
 # Timetable
 
-| Activity    | Time   |
-| ----------- | ------ |
-| Warmup      | 5 min  |
-| Excercise 1 | 10 min |
-| Wrap up     | 5 min  |
+| Activity   | Time   |
+| ---------- | ------ |
+| Warmup     | 5 min  |
+| Exercise 1 | 10 min |
+| Wrap up    | 5 min  |
 
 # Warmup
 

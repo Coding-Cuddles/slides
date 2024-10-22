@@ -21,7 +21,7 @@ subtitle: Advanced TDD
 | Chapter                    | Time     |
 | -------------------------- | -------- |
 | Welcome                    | 00:00:47 |
-| Core Collaps Supernova     | 00:03:48 |
+| Core Collapse Supernova    | 00:03:48 |
 | TDD Review: The Three Laws | 00:12:49 |
 | The Single Assert Rule     | 00:32:12 |
 
@@ -42,11 +42,11 @@ subtitle: Advanced TDD
 
 # Timetable
 
-| Activity    | Time   |
-| ----------- | ------ |
-| Warmup      | 5 min  |
-| Excercise 1 | 10 min |
-| Wrap up     | 5 min  |
+| Activity   | Time   |
+| ---------- | ------ |
+| Warmup     | 5 min  |
+| Exercise 1 | 10 min |
+| Wrap up    | 5 min  |
 
 # Warmup
 
