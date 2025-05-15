@@ -80,7 +80,7 @@ subtitle: Foundations of the SOLID Principles
 - Software Design
 - Implementation Details
 
-![The three levels of software development](img/sw-dev-levels.png)
+![The three levels of software development](solid/img/sw-dev-levels.png)
 
 # Software Architecture
 
