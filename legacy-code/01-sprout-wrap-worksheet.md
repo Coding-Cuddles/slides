@@ -1,5 +1,15 @@
 ### Exercise 1: Sprout a Simple Class
 
+Topic 1: When refactoring legacy code, how do you decide whether to extract a Sprout Method versus 
+creating a Sprout Class? What are the trade-offs in terms of testability, cohesion, 
+and future maintenance?
+
+Topic 2: How do you recognize when legacy behavior should remain within the current class versus 
+when it’s time to sprout a new class for better separation of concerns?
+
+Topic 3: In a large legacy system with high coupling, how can Sprout Method and Sprout Class be 
+part of a broader strategy to gradually modernize the codebase?
+
 - **Objective:** Implement the Sprout Method on a simple class.
 - **Task:**
   - Create a `Car` class with a `drive()` method that prints `"The car is driving!"`.

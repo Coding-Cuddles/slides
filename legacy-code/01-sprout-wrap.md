@@ -1,50 +1,24 @@
 ---
 title: Working Effectively with Legacy Code
-subtitle: Chapter 6 – I Need to Make a Change. What Can I Do?
+subtitle: Chapter 6 - I Dont Have Much Time and I Have to Change It
 ...
 
 # Pre-work
 
 - Book: *Working Effectively with Legacy Code* by Michael Feathers
-- Focus: Chapter 6 change techniques
-- Optional: <https://michaelfeathers.silvrback.com/the-sprout-method>
-
-# Chapters
-
-::: columns
-
-:::: column
-
-| Chapter                     | Time     |
-| ---------------------------| -------- |
-| Warmup                     | 00:00:00 |
-| Sprout Method              | 00:05:00 |
-| Sprout Class               | 00:15:00 |
-| Wrap Method                | 00:25:00 |
-
-::::
-
-:::: column
-
-| Chapter                     | Time     |
-| ---------------------------| -------- |
-| Wrap Class                 | 00:35:00 |
-| Strategy Comparison        | 00:45:00 |
-| Summary & Q&A              | 00:55:00 |
-
-::::
-
-:::
+- Focus: Chapter 6: I Dont Have Much Time and I Have to Change It
 
 # Timetable
 
-| Activity                     | Time   |
-| ----------------------------| ------ |
-| Warmup & Goals              | 5 min  |
-| Sprout Method & Class       | 20 min |
-| Wrap Method & Class         | 20 min |
-| Compare & Discuss           | 5 min  |
-| Summary & Q&A               | 10 min |
+| Activity              | Time   |
+|-----------------------|--------|
+| Greetings, Warmup     | 5 min  |
+| Sprout Method & Class | 15 min |
+| Exercise 1            | 15 min |
+| Wrap Method & Class   | 15 min |
+| Exercise 2            | 15 min |
+| Summary               | 10 min |
+| Closing               | 5 min  |
 
 # Warmup
 
@@ -62,16 +36,42 @@ Use this to establish mental models and prepare learners to explore change-based
 - Call the new method from existing one
 - No edits to original logic
 
-## Example
+# Legacy Code Example 
 
 ```python
-def charge(customer):
-    return new_charge_logic(customer)
-
-def new_charge_logic(customer):
-    # New behavior
-    return 42
+class VehicleLogger:
+    def log_trip(self, vehicle_type, distance_km, fuel_used_liters):
+        print(f"Trip: {distance_km} km")
+        if vehicle_type == "gasoline":
+            efficiency = distance_km / fuel_used_liters
+            print(f"Fuel efficiency: {efficiency:.2f} km/l")
+        elif vehicle_type == "electric":
+            efficiency = distance_km / fuel_used_liters  # misuse of field
+            print(f"Energy efficiency: {efficiency:.2f} km/kWh")
 ```
+
+# Improved Code Example 
+
+```python
+class VehicleLogger:
+    def log_trip(self, vehicle_type, distance_km, fuel_or_energy_used):
+        print(f"Trip: {distance_km} km")
+        self._log_efficiency(vehicle_type, distance_km, fuel_or_energy_used)
+
+    def _log_efficiency(self, vehicle_type, distance_km, amount_used):
+        if vehicle_type == "gasoline":
+            efficiency = distance_km / amount_used
+            print(f"Fuel efficiency: {efficiency:.2f} km/l")
+        elif vehicle_type == "electric":
+            efficiency = distance_km / amount_used
+            print(f"Energy efficiency: {efficiency:.2f} km/kWh")
+```
+\note{
+Benefits:
+ Isolated new behavior (_log_efficiency) → easier to test
+ Minimal change to existing method → reduced risk
+ Future changes (e.g., hybrid logic) can be added safely to the new method
+}
 
 # Sprout Class
 
@@ -79,42 +79,86 @@ def new_charge_logic(customer):
 - Keeps old logic intact
 - Ideal for complex changes needing state
 
-## Example
+# Legacy code Example
 
 ```python
-def calculate_invoice(cust):
-    return InvoiceCalculator(cust).run()
-
-class InvoiceCalculator:
-    def __init__(self, customer):
-        self.customer = customer
-    def run(self):
-        # New logic here
-        pass
+class VehicleLogger:
+    def log_trip(self, vehicle_type, distance_km, fuel_used_liters):
+        print(f"Trip: {distance_km} km")
+        if vehicle_type == "gasoline":
+            efficiency = distance_km / fuel_used_liters
+            print(f"Fuel efficiency: {efficiency:.2f} km/l")
+        elif vehicle_type == "electric":
+            efficiency = distance_km / fuel_used_liters
+            print(f"Energy efficiency: {efficiency:.2f} km/kWh")
 ```
+
+# Improved code Example
+
+```python
+class VehicleLogger:
+    def log_trip(self, vehicle_type, distance_km, fuel_or_energy_used):
+        print(f"Trip: {distance_km} km")
+        if vehicle_type == "electric":
+            EVLogger().log_efficiency(distance_km, fuel_or_energy_used)
+        elif vehicle_type == "gasoline":
+            efficiency = distance_km / fuel_or_energy_used
+            print(f"Fuel efficiency: {efficiency:.2f} km/l")
+
+class EVLogger:
+    def log_efficiency(self, distance_km, energy_kwh):
+        efficiency = distance_km / energy_kwh
+        print(f"Energy efficiency: {efficiency:.2f} km/kWh")
+```
+\note{
+Benefits:
+ New behavior is isolated in EVLogger
+ We avoid changing or bloating the legacy method with EV-specific logic
+ EVLogger is easy to test independently
+}
+# Exercise 1
+
+- Prompt
+  - When refactoring legacy code, how do you decide whether to extract a Sprout Method versus 
+creating a Sprout Class? What are the trade-offs in terms of testability, cohesion, 
+and future maintenance?
+- Time limit: 15 minutes
 
 # Wrap Method
 
-- Create a method that wraps (delegates to) the old method
-- Adds logic *before* or *after* the call
-- Leaves original untouched
+- The original method is renamed
+- A new method with the same name as the original wraps it
+- New logic (e.g. logging, validation) is inserted safely
+- No change to existing callers — they still call same method
 
-## Example
+## Legacy code Example
 
 ```python
-def send_invoice(customer):
-    log_invoice(customer)
-    real_send_invoice(customer)
-
-def real_send_invoice(customer):
-    print("Sending...")
+class Engine:
+    def calculate_torque(self, rpm, throttle):
+        return (rpm * throttle) / 100.0
 ```
+# Improved code Example
 
-# Wrap Method Benefits
+```python
+class Engine:
+    def _calculate_torque_original(self, rpm, throttle):
+        return (rpm * throttle) / 100.0
 
-- Low risk: no edits to legacy method
-- Adds behavior transparently
-- Good when you can’t or don’t want to touch legacy
+    def calculate_torque(self, rpm, throttle):
+        print(f"[LOG] Inputs: rpm={rpm}, throttle={throttle}")
+        torque = self._calculate_torque_original(rpm, throttle)
+        print(f"[LOG] Output: torque={torque}")
+        return torque
+```
+\note{
+Benefits:
+  Add behavior without modifying original logic
+  Keep method name unchanged for existing callers
+  Enable logging, validation, or instrumentation
+  Safe and reversible change
+  Supports incremental refactoring
+}
 
 # Wrap Class
 
@@ -122,157 +166,95 @@ def real_send_invoice(customer):
 - Delegates calls while injecting new logic
 - Helps isolate change when subclassing is risky
 
-## Example
+## Legacy code Example
 
 ```python
-class EmailSenderWrapper:
-    def __init__(self, real_sender):
-        self.real = real_sender
-
-    def send(self, message):
-        self.log(message)
-        return self.real.send(message)
-
-    def log(self, msg):
-        print("Logging email:", msg)
+class Engine:
+    def calculate_torque(self, rpm, throttle):
+        return (rpm * throttle) / 100.0
 ```
+
+# Improved code Example
+
+```python
+class LoggingEngine(Engine):
+    def calculate_torque(self, rpm, throttle):
+        print(f"[LOG] Calculating torque: rpm={rpm}, throttle={throttle}")
+        torque = super().calculate_torque(rpm, throttle)
+        print(f"[LOG] Torque result: {torque}")
+        return torque
+```
+\note{
+Benefits:
+  Extend behavior via subclassing
+  Override methods to add new logic
+  Avoid modifying the original class
+  Useful for testing or temporary changes
+  Keeps legacy code stable while injecting behavior
+}
+
+# Usage
+```python
+engine = LoggingEngine()
+engine.calculate_torque(3000, 70)
+```
+
+# Exercise 2
+
+- Prompt
+  - How do you recognize when legacy behavior should remain within the current class versus 
+when it’s time to sprout a new class for better separation of concerns?
+- Time limit: 15 minutes
 
 # Decorators and the Wrap Method
 
 - Decorators are a special form of wrapping that allows for dynamic extension.
 - In the context of the Wrap Method, decorators provide an elegant solution for layering additional behavior.
 
-### C++ Decorator Pattern Example
-
-```cpp
-#include <iostream>
-#include <memory>
-
-class Coffee {
-public:
-    virtual void cost() const { std::cout << "Basic coffee: $5\n"; }
-};
-
-class CoffeeDecorator : public Coffee {
-protected:
-    std::unique_ptr<Coffee> coffee;
-public:
-    CoffeeDecorator(std::unique_ptr<Coffee> c) : coffee(std::move(c)) {}
-    void cost() const override {
-        coffee->cost();
-    }
-};
-
-class MilkDecorator : public CoffeeDecorator {
-public:
-    MilkDecorator(std::unique_ptr<Coffee> c) : CoffeeDecorator(std::move(c)) {}
-    void cost() const override {
-        CoffeeDecorator::cost();
-        std::cout << "Adding milk: $1\n";
-    }
-};
-
-int main() {
-    std::unique_ptr<Coffee> coffee = std::make_unique<Coffee>();
-    MilkDecorator decoratedCoffee(std::move(coffee));
-    decoratedCoffee.cost();
-}
-```
-
-\note{
-This C++ code shows how decorators wrap an object and add additional behavior. The `MilkDecorator` class extends the `Coffee` class without altering its original structure.
-}
-
-# Decorator Pattern in Python
-
-- **Python**: A more dynamic and concise way to implement decorators.
-- Can be used to modify methods or class behavior at runtime using functions or class-based decorators.
-
-### Python Decorator Example
+### Python Decorator Pattern Example
 
 ```python
-class Coffee:
-    def cost(self):
-        print("Basic coffee: $5")
+class Vehicle:
+    def drive(self):
+        return "Driving"
 
-class CoffeeDecorator:
-    def __init__(self, coffee):
-        self._coffee = coffee
+class VehicleDecorator(Vehicle):
+    def __init__(self, vehicle):
+        self._vehicle = vehicle
 
-    def cost(self):
-        self._coffee.cost()
+    def drive(self):
+        return self._vehicle.drive()
 
-class MilkDecorator(CoffeeDecorator):
-    def cost(self):
-        self._coffee.cost()
-        print("Adding milk: $1")
+class LoggingDecorator(VehicleDecorator):
+    def drive(self):
+        action = self._vehicle.drive()
+        print(f"[LOG] Action: {action}")
+        return action
 
 # Usage
-coffee = Coffee()
-decorated_coffee = MilkDecorator(coffee)
-decorated_coffee.cost()
+car = LoggingDecorator(Vehicle())
+car.drive()
 ```
 
 \note{
-In Python, decorators can be more flexible. The `MilkDecorator` is a class-based decorator that modifies the behavior of the `cost()` method of the `Coffee` class, just as in C++, but with simpler syntax.
+This decorates a Vehicle object to add logging behavior without modifying the original class.
 }
+
 
 # Comparison & Benefits
 
-| Feature               | C++                                         | Python                                   |
-|-----------------------|---------------------------------------------|------------------------------------------|
-| Syntax                | Classes, inheritance, virtual methods       | Functions, classes, dynamic method calls |
-| Flexibility           | Requires careful memory management         | More dynamic and flexible               |
-| Usage Scenarios       | Performance-sensitive environments          | More dynamic, quick prototyping         |
+| Technique     | Location <br/>of Change | Scope | Purpose | Risk | Code Impact |
+|---------------|------------|-----------------|-------------------------------|------|---------------------------|
+| Sprout Method | Same class | One method      | Isolate new logic             | Low  | Add method,<br/> call it  |
+| Sprout Class  | New class  | Functionality   | Extract cohesive<br/>behavior | Low  | New class, <br/>inject it |
+| Wrap Method   | Same class | One method      | Insert logic around<br/>method| Low  | Rename + wrap<br/>method  |
+| Wrap Class    | Subclass   | Multiple methods| Modify/extend<br/>behavior    | Med  | New subclass<br/>created  |
+
 
 \note{
 Summarize the differences in the implementation of decorators in C++ and Python, emphasizing the trade-offs between the two languages in terms of flexibility and performance.
 }
 
-# Code Walkthrough: C++
-
-- Step-by-step breakdown of C++ code:
-    - **Coffee**: Base class with the `cost()` method.
-    - **CoffeeDecorator**: A wrapper for extending functionality.
-    - **MilkDecorator**: Adds the milk cost dynamically.
-  
-\note{
-Take the time to walk through the C++ code. Discuss how decorators encapsulate functionality without modifying the original class and how they can be stacked for layered behaviors.
-}
-
-# Code Walkthrough: Python
-
-- Step-by-step breakdown of Python code:
-    - **Coffee**: Basic coffee class.
-    - **CoffeeDecorator**: The decorator base class.
-    - **MilkDecorator**: Adds milk to the cost dynamically.
-
-\note{
-Explain how Python decorators are simpler to implement and why this is a great tool for rapid development and cleaner code.
-}
-
-# Q&A and Wrap-up
-
-- When would you prefer using decorators over other design patterns (like strategy or composite)?
-- What are some potential drawbacks to using decorators excessively?
-
-\note{
-Encourage the students to reflect on practical uses and drawbacks. Ask them to think about when they might reach for this pattern in their own projects.
-}
-
-# When to Use Each
-
-| Technique        | Use When...                              |
-|------------------|-------------------------------------------|
-| Sprout Method    | Small change fits in one method           |
-| Sprout Class     | Larger change needs state/context         |
-| Wrap Method      | Add logic before/after a method safely    |
-| Wrap Class       | Insert logic across many methods or state |
-
-\note{
-You can draw a 2x2: *Sprout vs Wrap* on one axis, *Method vs Class* on the other.
-Helps learners visualize choices.
-}
 
 # Summary
 
