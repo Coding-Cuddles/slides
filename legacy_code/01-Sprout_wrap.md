@@ -174,7 +174,7 @@ public:
 
 int main() {
     auto coffee = std::make_unique<Coffee>();
-    MilkDecorator decoratedCoffee(std::move(coffee));
+    MilkDecorator decorated_coffee(std::move(coffee));
     decoratedCoffee.cost();
 }
 ```
