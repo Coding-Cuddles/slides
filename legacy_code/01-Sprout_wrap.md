@@ -173,7 +173,7 @@ public:
 };
 
 int main() {
-    std::unique_ptr<Coffee> coffee = std::make_unique<Coffee>();
+    auto coffee = std::make_unique<Coffee>();
     MilkDecorator decoratedCoffee(std::move(coffee));
     decoratedCoffee.cost();
 }
