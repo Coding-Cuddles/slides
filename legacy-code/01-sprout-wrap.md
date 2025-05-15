@@ -6,7 +6,7 @@ subtitle: Chapter 6 – I Need to Make a Change. What Can I Do?
 # Pre-work
 
 - Book: *Working Effectively with Legacy Code* by Michael Feathers
-- Focus: Chapter 6 change techniques
+- Focus: Chapter 6: Change Techniques
 - Optional: <https://michaelfeathers.silvrback.com/the-sprout-method>
 
 # Chapters
@@ -173,8 +173,8 @@ public:
 };
 
 int main() {
-    std::unique_ptr<Coffee> coffee = std::make_unique<Coffee>();
-    MilkDecorator decoratedCoffee(std::move(coffee));
+    auto coffee = std::make_unique<Coffee>();
+    MilkDecorator decorated_coffee(std::move(coffee));
     decoratedCoffee.cost();
 }
 ```
