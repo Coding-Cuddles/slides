@@ -58,28 +58,14 @@ subtitle: Names++
 | `theTable`          | Variable | List of rows with column elements            |
 | `set`               | Class    | Collection of unique elements                |
 
-# Exercise 2
+# Why worry about names?
 
-- Prompt
-  - Fill-in the blanks for using different parts of speech in names
-  - Parts of speech [reference](https://en.wikipedia.org/wiki/Part_of_speech)
-- Time limit: 10 minutes
+"Code should read like well-written prose."
+-- Robert C. Martin
 
-# Possible answers
+What do we mean by well-written prose?
 
-| Entity                                     | Part of speech | Example                  |
-| ------------------------------------------ | -------------- | ------------------------ |
-| Class                                      | Noun           | `Solver`, `SupplyChain`  |
-| Variable                                   | Noun           | `transaction`, `table`   |
-| Boolean variable                           | Predicate      | `is_active`, `is_valid`  |
-| Function or method                         | Verb           | `open`, `fill_hierarchy` |
-| Function or method returning a boolean     | Predicate      | `is_empty`, `is_open`    |
-| Accessor (getter or setter)                | Verb           | `get_name`, `set_name`   |
-| Property (method pretending to be a field) | Noun           | `name`, `age`            |
-| Boolean property                           | Predicate      | `is_empty`, `is_open`    |
-| Enum (state or object descriptor)          | Adjective      | `RED`, `SWITCHABLE`      |
-
-# Putting parts of speech together
+# Elements of well-written prose
 
 - Write in active voice
 - Choose strong verbs
@@ -96,20 +82,23 @@ for more details
   - Most readers mentally translate passive voice to active voice
   - It is easier to read
   - It is more concise
+  - The actor (who does what to whom) is clearly identified
 - Active voice sentence structure
   - Active voice sentence = actor + verb + target
-  - Passive voice sentence = target + verb + actor
-  - Yoda speak = verb + target + actor
+  - Passive voice sentence = target + verb [+ actor]
+  - Yoda speak = target + actor + verb
 - Examples
   - Active voice
     - The user clicks the button.
     - The system sends the email.
+    - The oscillator generates the signal on demand.
   - Passive voice
     - The button is clicked by the user.
     - The email is sent by the system.
+    - The signal is generated on demand.
   - Yoda speak
-    - Clicked the button is by the user.
-    - Sent the email is by the system.
+    - The button the user clicks.
+    - The email the system sends.
 
 # Choose strong verbs
 
@@ -159,7 +148,7 @@ for more details
   - Logical category is essential,
   - Capitalization and punctuation
 
-# Exercise 3
+# Exercise 2
 
 - Improve the following sentences
   1. The moth was removed by Grace Hopper.
@@ -174,6 +163,27 @@ for more details
 2. The `--noperf` flag overrides performance optimization.
 3. The QA team discovered that the `Timer()` method contained bugs. The
    static `Timer()` method provided measurements until the bugs were discovered.
+
+# Exercise 3
+
+- Prompt
+  - Fill in the blanks for using different parts of speech in names
+  - Parts of speech [reference](https://en.wikipedia.org/wiki/Part_of_speech)
+- Time limit: 10 minutes
+
+# Possible answers
+
+| Entity                                     | Part of speech | Example                  |
+| ------------------------------------------ | -------------- | ------------------------ |
+| Class                                      | Noun           | `Solver`, `SupplyChain`  |
+| Variable                                   | Noun           | `transaction`, `table`   |
+| Boolean variable                           | Predicate      | `is_active`, `is_valid`  |
+| Function or method                         | Verb           | `open`, `fill_hierarchy` |
+| Function or method returning a boolean     | Predicate      | `is_empty`, `is_open`    |
+| Accessor (getter or setter)                | Verb           | `get_name`, `set_name`   |
+| Property (method pretending to be a field) | Noun           | `name`, `age`            |
+| Boolean property                           | Predicate      | `is_empty`, `is_open`    |
+| Enum (state or object descriptor)          | Adjective      | `RED`, `SWITCHABLE`      |
 
 # Wrap up
 
