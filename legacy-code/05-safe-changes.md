@@ -1,14 +1,8 @@
----
-title: Working Effectively with Legacy Code
-subtitle: Chapter 6 - I Dont Have Much Time and I Have to Change It
-...
+% Safe, Non-Invasive Changes
+% Week 5: Discussion Session
+% Advanced Software Engineering
 
-# Pre-work
-
-- Book: *Working Effectively with Legacy Code* by Michael Feathers
-- Focus: Chapter 6: I Dont Have Much Time and I Have to Change It
-
-# Timetable
+# Session Timetable
 
 | Activity              | Time   |
 |-----------------------|--------|
@@ -26,17 +20,13 @@ subtitle: Chapter 6 - I Dont Have Much Time and I Have to Change It
 - Ever added a wrapper instead of modifying directly?
 - Share in chat: "Sprout" or "Wrap" — which sounds safer to you?
 
-\note{
-Use this to establish mental models and prepare learners to explore change-based techniques.
-}
-
 # Sprout Method
 
 - Add new logic in a new method
 - Call the new method from existing one
 - No edits to original logic
 
-# Legacy Code Example 
+## Python Example
 
 ```python
 class VehicleLogger:
@@ -50,7 +40,7 @@ class VehicleLogger:
             print(f"Energy efficiency: {efficiency:.2f} km/kWh")
 ```
 
-# Improved Code Example 
+### Improved Code Example
 
 ```python
 class VehicleLogger:
@@ -66,12 +56,6 @@ class VehicleLogger:
             efficiency = distance_km / amount_used
             print(f"Energy efficiency: {efficiency:.2f} km/kWh")
 ```
-\note{
-Benefits:
- Isolated new behavior (_log_efficiency) → easier to test
- Minimal change to existing method → reduced risk
- Future changes (e.g., hybrid logic) can be added safely to the new method
-}
 
 # Sprout Class
 
@@ -79,7 +63,7 @@ Benefits:
 - Keeps old logic intact
 - Ideal for complex changes needing state
 
-# Legacy code Example
+## Python Example
 
 ```python
 class VehicleLogger:
@@ -93,7 +77,7 @@ class VehicleLogger:
             print(f"Energy efficiency: {efficiency:.2f} km/kWh")
 ```
 
-# Improved code Example
+### Improved Code Example
 
 ```python
 class VehicleLogger:
@@ -110,18 +94,10 @@ class EVLogger:
         efficiency = distance_km / energy_kwh
         print(f"Energy efficiency: {efficiency:.2f} km/kWh")
 ```
-\note{
-Benefits:
- New behavior is isolated in EVLogger
- We avoid changing or bloating the legacy method with EV-specific logic
- EVLogger is easy to test independently
-}
+
 # Exercise 1
 
-- Prompt
-  - When refactoring legacy code, how do you decide whether to extract a Sprout Method versus 
-creating a Sprout Class? What are the trade-offs in terms of testability, cohesion, 
-and future maintenance?
+- When refactoring legacy code, how do you decide whether to extract a Sprout Method versus creating a Sprout Class? What are the trade-offs in terms of testability, cohesion, and future maintenance?
 - Time limit: 15 minutes
 
 # Wrap Method
@@ -131,14 +107,15 @@ and future maintenance?
 - New logic (e.g. logging, validation) is inserted safely
 - No change to existing callers — they still call same method
 
-## Legacy code Example
+## Python Example
 
 ```python
 class Engine:
     def calculate_torque(self, rpm, throttle):
         return (rpm * throttle) / 100.0
 ```
-# Improved code Example
+
+### Improved Code Example
 
 ```python
 class Engine:
@@ -151,14 +128,6 @@ class Engine:
         print(f"[LOG] Output: torque={torque}")
         return torque
 ```
-\note{
-Benefits:
-  Add behavior without modifying original logic
-  Keep method name unchanged for existing callers
-  Enable logging, validation, or instrumentation
-  Safe and reversible change
-  Supports incremental refactoring
-}
 
 # Wrap Class
 
@@ -166,7 +135,7 @@ Benefits:
 - Delegates calls while injecting new logic
 - Helps isolate change when subclassing is risky
 
-## Legacy code Example
+## Python Example
 
 ```python
 class Engine:
@@ -174,7 +143,7 @@ class Engine:
         return (rpm * throttle) / 100.0
 ```
 
-# Improved code Example
+### Improved Code Example
 
 ```python
 class LoggingEngine(Engine):
@@ -184,16 +153,9 @@ class LoggingEngine(Engine):
         print(f"[LOG] Torque result: {torque}")
         return torque
 ```
-\note{
-Benefits:
-  Extend behavior via subclassing
-  Override methods to add new logic
-  Avoid modifying the original class
-  Useful for testing or temporary changes
-  Keeps legacy code stable while injecting behavior
-}
 
 # Usage
+
 ```python
 engine = LoggingEngine()
 engine.calculate_torque(3000, 70)
@@ -201,9 +163,7 @@ engine.calculate_torque(3000, 70)
 
 # Exercise 2
 
-- Prompt
-  - How do you recognize when legacy behavior should remain within the current class versus 
-when it’s time to sprout a new class for better separation of concerns?
+- How do you recognize when legacy behavior should remain within the current class versus when it’s time to sprout a new class for better separation of concerns?
 - Time limit: 15 minutes
 
 # Decorators and the Wrap Method
@@ -236,11 +196,6 @@ car = LoggingDecorator(Vehicle())
 car.drive()
 ```
 
-\note{
-This decorates a Vehicle object to add logging behavior without modifying the original class.
-}
-
-
 # Comparison & Benefits
 
 | Technique     | Location <br/>of Change | Scope | Purpose | Risk | Code Impact |
@@ -249,12 +204,6 @@ This decorates a Vehicle object to add logging behavior without modifying the or
 | Sprout Class  | New class  | Functionality   | Extract cohesive<br/>behavior | Low  | New class, <br/>inject it |
 | Wrap Method   | Same class | One method      | Insert logic around<br/>method| Low  | Rename + wrap<br/>method  |
 | Wrap Class    | Subclass   | Multiple methods| Modify/extend<br/>behavior    | Med  | New subclass<br/>created  |
-
-
-\note{
-Summarize the differences in the implementation of decorators in C++ and Python, emphasizing the trade-offs between the two languages in terms of flexibility and performance.
-}
-
 
 # Summary
 
