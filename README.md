@@ -91,3 +91,18 @@ Here you can find slides for Clean Code conversations or classes.
 [tire-pressure-kata-cpp]: https://github.com/Coding-Cuddles/tire-pressure-monitoring-cpp-kata
 [99-bottles-kata-python]: https://github.com/Coding-Cuddles/99-bottles-of-beer-python-kata
 [99-bottles-kata-cpp]: https://github.com/Coding-Cuddles/99-bottles-of-beer-cpp-kata
+
+### Legacy Code (Blue Belt)
+
+|   # | Session Type | Name                                                                                                   |
+| --: | ------------ | ------------------------------------------------------------------------------------------------------ |
+|   1 | Discussion   | [Understanding Legacy Code](legacy-code/01-understanding-legacy.md)                                    |
+|   2 | Kata         | [Identifying Legacy Code Kata](legacy-code/02-kata-identifying.md)                                     |
+|   3 | Discussion   | [Building a Safety Net](legacy-code/03-safety-net.md)                                                  |
+|   4 | Kata         | [Characterization Testing Kata](legacy-code/04-kata-characterization-testing.md)                       |
+|   5 | Discussion   | [Safe, Non-Invasive Changes](legacy-code/05-safe-changes.md)                                           |
+|   6 | Kata         | [Sprouting & Wrapping Kata](legacy-code/06-kata-sprouting-wrapping.md)                                 |
+|   7 | Discussion   | [Core Dependency Breaking Techniques](legacy-code/07-dependency-breaking.md)                            |
+|   8 | Kata         | [Dependency Breaking Kata](legacy-code/08-kata-dependency-breaking.md)                                 |
+|   9 | Discussion   | [Advanced Topics & Large-Scale Strategy](legacy-code/09-advanced-topics.md)                            |
+|  10 | Kata         | [Large-Scale Refactoring Kata](legacy-code/10-kata-large-scale-refactoring.md)                         |
