@@ -147,10 +147,13 @@ class Engine:
 ### Improved Code Example
 
 ```python
-class LoggingEngine(Engine):
+class LoggingEngine:
+    def __init__(self, engine):
+        self._engine = engine
+
     def calculate_torque(self, rpm, throttle):
         print(f"[LOG] Calculating torque: rpm={rpm}, throttle={throttle}")
-        torque = super().calculate_torque(rpm, throttle)
+        torque = self._engine.calculate_torque(rpm, throttle)
         print(f"[LOG] Torque result: {torque}")
         return torque
 ```
@@ -158,7 +161,7 @@ class LoggingEngine(Engine):
 # Usage
 
 ```python
-engine = LoggingEngine()
+engine = LoggingEngine(Engine())
 engine.calculate_torque(3000, 70)
 ```
 
@@ -200,12 +203,12 @@ car.drive()
 
 # Comparison & Benefits
 
-| Technique     | Location <br/>of Change | Scope            | Purpose                        | Risk | Code Impact               |
-| ------------- | ----------------------- | ---------------- | ------------------------------ | ---- | ------------------------- |
-| Sprout Method | Same class              | One method       | Isolate new logic              | Low  | Add method,<br/> call it  |
-| Sprout Class  | New class               | Functionality    | Extract cohesive<br/>behavior  | Low  | New class, <br/>inject it |
-| Wrap Method   | Same class              | One method       | Insert logic around<br/>method | Low  | Rename + wrap<br/>method  |
-| Wrap Class    | Subclass                | Multiple methods | Modify/extend<br/>behavior     | Med  | New subclass<br/>created  |
+| Technique     | Location <br/>of Change | Scope            | Purpose                              | Risk | Code Impact               |
+| ------------- | ----------------------- | ---------------- | ------------------------------------ | ---- | ------------------------- |
+| Sprout Method | Same class              | One method       | Isolate new logic                    | Low  | Add method,<br/> call it  |
+| Sprout Class  | New class               | Functionality    | Extract cohesive<br/>behavior        | Low  | New class, <br/>inject it |
+| Wrap Method   | Same class              | One method       | Insert logic around<br/>method       | Low  | Rename + wrap<br/>method  |
+| Wrap Class    | Wrapper                 | Multiple methods | Add behavior around<br/>legacy class | Med  | New wrapper<br/>created   |
 
 # Summary
 

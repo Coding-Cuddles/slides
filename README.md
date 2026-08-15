@@ -5,7 +5,7 @@
 
 ## Overview
 
-Here you can find slides for Clean Code conversations or classes.
+This repository contains slide decks for Clean Code conversations and classes.
 
 ## Development
 
@@ -85,7 +85,7 @@ here are the only place the curriculum is edited.
 |   1 | Discussion   | [Advanced TDD](advanced-tdd/01-advanced-tdd.md#warmup)                                                            |
 |   2 | Coding Dojo  | Roman Numerals Kata ([Python][roman-numerals-python], [C++][roman-numerals-cpp])                                  |
 |   3 | Discussion   | [Clean Tests](advanced-tdd/03-clean-tests.md#warmup)                                                              |
-|   4 | Coding Dojo  | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-python])                                           |
+|   4 | Coding Dojo  | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-cpp])                                              |
 |   5 | Coding Mob   | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-cpp])                                              |
 |   6 | Discussion   | Test Design / Test Process                                                                                        |
 |   7 | Coding Dojo  | Hyper-optimized Telemetry Kata ([Python][hyper-optimized-telemetry-python], [C++][hyper-optimized-telemetry-cpp]) |

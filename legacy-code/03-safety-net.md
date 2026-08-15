@@ -67,7 +67,7 @@ TEST_CASE("InvoiceCalculator preserves existing behavior") {
     double result = calc.calculateTotal(items);
 
     // Document the exact current behavior
-    REQUIRE(result == Approx(1850.95));
+    REQUIRE(result == Approx(2132.10));
     // Note: This might not be correct behavior,
     // but it's what the system currently does
 }
@@ -76,6 +76,9 @@ TEST_CASE("InvoiceCalculator preserves existing behavior") {
 ## Python Example: Characterization Testing Technique
 
 ```python
+import pytest
+
+
 # Original Legacy Code
 class TaxCalculator:
     def calculate_tax(self, income, state):
@@ -98,26 +101,20 @@ class TaxCalculator:
 def test_capture_current_tax_behavior():
     calc = TaxCalculator()
 
-    # Test cases to capture current behavior
+    # Exact outputs captured from the current implementation
     test_cases = [
-        (30000, "NY"),
-        (60000, "NY"),
-        (120000, "NY"),
-        (50000, "CA"),
-        (80000, "CA"),
-        (45000, "TX")
+        (30000, "NY", 1200),
+        (60000, "NY", 3600),
+        (120000, "NY", 10800),
+        (50000, "CA", 1500),
+        (80000, "CA", 5600),
+        (45000, "TX", 450),
     ]
 
-    # Store current behavior
-    results = {
-        case: calc.calculate_tax(*case)
-        for case in test_cases
-    }
-
     # Verify behavior remains unchanged
-    for case in test_cases:
-        assert calc.calculate_tax(*case) == results[case], \
-            f"Behavior changed for {case}"
+    for income, state, expected in test_cases:
+        result = calc.calculate_tax(income, state)
+        assert result == pytest.approx(expected), f"Behavior changed for {(income, state)}"
 ```
 
 # Key Techniques
