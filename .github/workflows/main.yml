@@ -6,19 +6,34 @@ on:
       - main
   pull_request:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: {}
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci --ignore-scripts
+
+      - run: make check
+
+  build:
+    needs: lint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v7
 
       - name: Install Pandoc and LaTeX
         run: |
@@ -33,12 +48,21 @@ jobs:
         run: make -j
 
       - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
+    permissions:
+      pages: write
+      id-token: write
+
+    # Job-level rather than workflow-level: only the deployment needs
+    # serializing, and a shared group would queue unrelated pull request runs.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
 
     environment:
       name: github-pages
@@ -47,4 +71,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
