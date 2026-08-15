@@ -11,10 +11,12 @@
 # Dependency Breaking Techniques
 
 ## Adapters
+
 - Introduce new interfaces to decouple code
 - Allow substitution of dependencies for testing
 
 ## Seams
+
 - Places where you can alter behavior without editing code
 - Types: Preprocessor, Link, Object, and Parameter seams
 
@@ -108,6 +110,7 @@ class PaymentProcessor:
 # Next Week
 
 Prepare for hands-on kata:
+
 - Implementing adapters and seams
 - Refactoring for testability
 - Managing risk during dependency breaking

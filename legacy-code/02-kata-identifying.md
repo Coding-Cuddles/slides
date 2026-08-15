@@ -20,7 +20,7 @@ private:
     static OrderProcessor* instance;
     Database* db;
     EmailService* emailService;
-    
+
     OrderProcessor() {
         db = new Database("production_db");
         emailService = new EmailService();
@@ -38,16 +38,16 @@ public:
         if (!db->isConnected()) {
             db->connect();
         }
-        
+
         bool success = false;
         if (order.getTotal() > 0) {
             success = db->executeQuery(
-                "INSERT INTO orders VALUES (" + 
-                order.getId() + "," + 
+                "INSERT INTO orders VALUES (" +
+                order.getId() + "," +
                 order.getCustomerId() + "," +
                 order.getTotal() + ")"
             );
-            
+
             if (success) {
                 emailService->sendEmail(
                     order.getCustomerEmail(),
@@ -68,21 +68,21 @@ class ReportGenerator:
     def __init__(self):
         self.db = Database()
         self.template_engine = TemplateEngine()
-        
+
     def generate_monthly_report(self, month, year):
         # Connect to database
         self.db.connect()
-        
+
         # Get data
         sales_data = self.db.execute_query(
             f"SELECT * FROM sales WHERE MONTH(date) = {month} "
             f"AND YEAR(date) = {year}"
         )
-        
+
         # Process data
         total = sum(sale['amount'] for sale in sales_data)
         avg = total / len(sales_data) if sales_data else 0
-        
+
         # Generate report
         report = self.template_engine.load_template('monthly_report')
         report.set_data({
@@ -92,11 +92,11 @@ class ReportGenerator:
             'total': total,
             'average': avg
         })
-        
+
         # Save to file system
         filename = f"report_{month}_{year}.pdf"
         report.save_as_pdf(filename)
-        
+
         # Send email
         email = EmailService()
         email.send(
@@ -146,6 +146,7 @@ class ReportGenerator:
 # Follow-up
 
 Prepare for next week's session on:
+
 - Building a safety net
 - Writing characterization tests
 - Understanding test coverage strategies

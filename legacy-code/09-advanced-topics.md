@@ -11,11 +11,13 @@
 # Large-Scale Refactoring
 
 ## Approaches
+
 - Incremental vs. Big Bang
 - Strangler Fig Pattern
 - Parallel Change (Expand and Contract)
 
 ## Managing Technical Debt
+
 - Identifying and prioritizing debt
 - Communicating debt to stakeholders
 - Balancing business needs and code quality
@@ -100,6 +102,7 @@ def calculate_billing(invoice, use_new=False):
 # Next Week
 
 Prepare for hands-on kata:
+
 - Applying large-scale refactoring
 - Managing risk and business continuity
 - Measuring success
