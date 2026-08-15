@@ -5,7 +5,7 @@
 
 ## Overview
 
-Here you can find slides for Clean Code conversations or classes.
+This repository contains slide decks for Clean Code conversations and classes.
 
 ## Development
 
@@ -53,19 +53,19 @@ here are the only place the curriculum is edited.
 
 ### SOLID (Orange Belt)
 
-|   # | Session Type | Name                                                                                         |
-| --: | ------------ | -------------------------------------------------------------------------------------------- |
-|   1 | Discussion   | [Foundations of the SOLID principles](solid/01-foundations.md#warmup)                        |
-|   2 | Discussion   | [The Single Responsibility Principle](solid/02-srp.md#warmup)                                |
-|   3 | Coding Dojo  | Gilded Rose Refactoring Kata ([Python][gilded-rose-python], [C++][gilded-rose-cpp])          |
-|   4 | Discussion   | The Dependency Inversion Principle                                                           |
-|   5 | Coding Dojo  | Smart Home Refactoring Kata ([Python][smart-home-python], [C++][smart-home-cpp])             |
-|   6 | Discussion   | The Interface Segregation Principle                                                          |
-|   7 | Coding Dojo  | Media Player Refactoring Kata ([Python][media-player-python], [C++][media-player-cpp])       |
-|   8 | Discussion   | The Open-Closed Principle                                                                    |
-|   9 | Coding Dojo  | Expense Report Refactoring Kata ([Python][expense-report-python], [C++][expense-report-cpp]) |
-|  10 | Discussion   | The Liskov Substitution Principle                                                            |
-|  11 | Coding Dojo  | Game of Life Refactoring Kata ([Python][game-of-life-python], [C++][game-of-life-cpp])       |
+|   # | Session Type | Name                                                                                                                   |
+| --: | ------------ | ---------------------------------------------------------------------------------------------------------------------- |
+|   1 | Discussion   | [Foundations of the SOLID principles](solid/01-foundations.md#warmup) ([worksheet](solid/01-foundations-worksheet.md)) |
+|   2 | Discussion   | [The Single Responsibility Principle](solid/02-srp.md#warmup)                                                          |
+|   3 | Coding Dojo  | Gilded Rose Refactoring Kata ([Python][gilded-rose-python], [C++][gilded-rose-cpp])                                    |
+|   4 | Discussion   | The Dependency Inversion Principle                                                                                     |
+|   5 | Coding Dojo  | Smart Home Refactoring Kata ([Python][smart-home-python], [C++][smart-home-cpp])                                       |
+|   6 | Discussion   | The Interface Segregation Principle                                                                                    |
+|   7 | Coding Dojo  | Media Player Refactoring Kata ([Python][media-player-python], [C++][media-player-cpp])                                 |
+|   8 | Discussion   | The Open-Closed Principle                                                                                              |
+|   9 | Coding Dojo  | Expense Report Refactoring Kata ([Python][expense-report-python], [C++][expense-report-cpp])                           |
+|  10 | Discussion   | The Liskov Substitution Principle                                                                                      |
+|  11 | Coding Dojo  | Game of Life Refactoring Kata ([Python][game-of-life-python], [C++][game-of-life-cpp])                                 |
 
 [gilded-rose-python]: https://github.com/Coding-Cuddles/gilded-rose-refactoring-python-kata
 [gilded-rose-cpp]: https://github.com/Coding-Cuddles/gilded-rose-refactoring-cpp-kata
@@ -85,7 +85,7 @@ here are the only place the curriculum is edited.
 |   1 | Discussion   | [Advanced TDD](advanced-tdd/01-advanced-tdd.md#warmup)                                                            |
 |   2 | Coding Dojo  | Roman Numerals Kata ([Python][roman-numerals-python], [C++][roman-numerals-cpp])                                  |
 |   3 | Discussion   | [Clean Tests](advanced-tdd/03-clean-tests.md#warmup)                                                              |
-|   4 | Coding Dojo  | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-python])                                           |
+|   4 | Coding Dojo  | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-cpp])                                              |
 |   5 | Coding Mob   | Mars Rover Kata ([Python][mars-rover-python], [C++][mars-rover-cpp])                                              |
 |   6 | Discussion   | Test Design / Test Process                                                                                        |
 |   7 | Coding Dojo  | Hyper-optimized Telemetry Kata ([Python][hyper-optimized-telemetry-python], [C++][hyper-optimized-telemetry-cpp]) |
