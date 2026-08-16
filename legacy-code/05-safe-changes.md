@@ -5,7 +5,7 @@
 # Session Timetable
 
 | Activity              | Time   |
-|-----------------------|--------|
+| --------------------- | ------ |
 | Greetings, Warmup     | 5 min  |
 | Sprout Method & Class | 15 min |
 | Exercise 1            | 15 min |
@@ -97,7 +97,8 @@ class EVLogger:
 
 # Exercise 1
 
-- When refactoring legacy code, how do you decide whether to extract a Sprout Method versus creating a Sprout Class? What are the trade-offs in terms of testability, cohesion, and future maintenance?
+- When refactoring legacy code, how do you decide whether to use a Sprout Method or a Sprout Class?
+- What are the trade-offs in testability, cohesion, and future maintenance?
 - Time limit: 15 minutes
 
 # Wrap Method
@@ -163,7 +164,8 @@ engine.calculate_torque(3000, 70)
 
 # Exercise 2
 
-- How do you recognize when legacy behavior should remain within the current class versus when it’s time to sprout a new class for better separation of concerns?
+- How do you decide whether legacy behavior should remain in its current class or move into a Sprout Class?
+- What separation-of-concerns signals inform that choice?
 - Time limit: 15 minutes
 
 # Decorators and the Wrap Method
@@ -171,7 +173,7 @@ engine.calculate_torque(3000, 70)
 - Decorators are a special form of wrapping that allows for dynamic extension.
 - In the context of the Wrap Method, decorators provide an elegant solution for layering additional behavior.
 
-### Python Decorator Pattern Example
+## Python Decorator Pattern Example
 
 ```python
 class Vehicle:
@@ -198,19 +200,19 @@ car.drive()
 
 # Comparison & Benefits
 
-| Technique     | Location <br/>of Change | Scope | Purpose | Risk | Code Impact |
-|---------------|------------|-----------------|-------------------------------|------|---------------------------|
-| Sprout Method | Same class | One method      | Isolate new logic             | Low  | Add method,<br/> call it  |
-| Sprout Class  | New class  | Functionality   | Extract cohesive<br/>behavior | Low  | New class, <br/>inject it |
-| Wrap Method   | Same class | One method      | Insert logic around<br/>method| Low  | Rename + wrap<br/>method  |
-| Wrap Class    | Subclass   | Multiple methods| Modify/extend<br/>behavior    | Med  | New subclass<br/>created  |
+| Technique     | Location <br/>of Change | Scope            | Purpose                        | Risk | Code Impact               |
+| ------------- | ----------------------- | ---------------- | ------------------------------ | ---- | ------------------------- |
+| Sprout Method | Same class              | One method       | Isolate new logic              | Low  | Add method,<br/> call it  |
+| Sprout Class  | New class               | Functionality    | Extract cohesive<br/>behavior  | Low  | New class, <br/>inject it |
+| Wrap Method   | Same class              | One method       | Insert logic around<br/>method | Low  | Rename + wrap<br/>method  |
+| Wrap Class    | Subclass                | Multiple methods | Modify/extend<br/>behavior     | Med  | New subclass<br/>created  |
 
 # Summary
 
 - **Sprout** = add new code that old code calls
 - **Wrap** = write code that calls into the old code
-- Use *Method* for simple logic, *Class* for complex or stateful logic
-- These give you *safe entry points* into legacy code
+- Use _Method_ for simple logic, _Class_ for complex or stateful logic
+- These give you _safe entry points_ into legacy code
 
 # Final Thought
 

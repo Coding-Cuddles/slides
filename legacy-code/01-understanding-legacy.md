@@ -36,19 +36,19 @@
 class DataProcessor {
     Database db;
     Logger logger;
-    
+
 public:
     void process(const std::string& data) {
         db.connect("hardcoded:connection:string");
         logger.log("Processing started");
-        
+
         // Complex business logic intertwined with
         // database calls and logging
         if (data.length() > 0) {
             db.insert(data);
             logger.log("Data inserted");
         }
-        
+
         db.disconnect();
     }
 };
@@ -65,12 +65,12 @@ class ReportGenerator:
             database="reports_db",
             user="admin"
         )
-        
+
         # Business logic mixed with data access
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM sales")
         results = cursor.fetchall()
-        
+
         # Direct file system access
         with open('report.pdf', 'wb') as f:
             pdf = PDF()
@@ -97,6 +97,7 @@ class ReportGenerator:
 # Next Week
 
 Prepare for hands-on kata:
+
 - Identifying legacy code characteristics
 - Initial assessment techniques
 - Setting up a testing strategy

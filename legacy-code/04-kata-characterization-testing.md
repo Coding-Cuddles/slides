@@ -77,6 +77,7 @@ class ShippingCostCalculator:
 # Follow-up
 
 Prepare for next week's session on:
+
 - Safe, non-invasive changes
 - Sprouting and wrapping techniques
 - Planning incremental improvements

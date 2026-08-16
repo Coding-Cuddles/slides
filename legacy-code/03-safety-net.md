@@ -11,11 +11,13 @@
 # Understanding Characterization Tests
 
 ## What are they?
+
 - Tests that describe current behavior
 - Document "what is" rather than "what should be"
 - First line of defense when working with legacy code
 
 ## Why do we need them?
+
 - Capture existing behavior
 - Provide safety for refactoring
 - Document system behavior
@@ -60,10 +62,10 @@ TEST_CASE("InvoiceCalculator preserves existing behavior") {
         {11, 100.0},  // Bulk discount case
         {1, 1001.0}   // Large order case
     };
-    
+
     // Capture current behavior
     double result = calc.calculateTotal(items);
-    
+
     // Document the exact current behavior
     REQUIRE(result == Approx(1850.95));
     // Note: This might not be correct behavior,
@@ -89,13 +91,13 @@ class TaxCalculator:
                 base_rate += 0.04
         else:
             base_rate = 0.01
-        
+
         return income * base_rate
 
 # Characterization Tests
 def test_capture_current_tax_behavior():
     calc = TaxCalculator()
-    
+
     # Test cases to capture current behavior
     test_cases = [
         (30000, "NY"),
@@ -105,13 +107,13 @@ def test_capture_current_tax_behavior():
         (80000, "CA"),
         (45000, "TX")
     ]
-    
+
     # Store current behavior
     results = {
         case: calc.calculate_tax(*case)
         for case in test_cases
     }
-    
+
     # Verify behavior remains unchanged
     for case in test_cases:
         assert calc.calculate_tax(*case) == results[case], \
@@ -147,6 +149,7 @@ def test_capture_current_tax_behavior():
 # Next Week
 
 Prepare for hands-on kata:
+
 - Writing effective characterization tests
 - Creating seams in legacy code
 - Organizing test suites effectively

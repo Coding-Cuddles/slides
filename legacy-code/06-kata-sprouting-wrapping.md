@@ -67,6 +67,7 @@ class UserManager:
 # Follow-up
 
 Prepare for next week's session on:
+
 - Breaking dependencies
 - Using adapters and seams
 - Refactoring for flexibility

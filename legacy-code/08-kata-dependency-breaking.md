@@ -73,6 +73,7 @@ class EmailSender:
 # Follow-up
 
 Prepare for next week's session on:
+
 - Large-scale refactoring
 - Managing technical debt
 - Strategic improvement planning
