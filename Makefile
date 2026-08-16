@@ -5,7 +5,8 @@ MARKDOWNS := $(shell find . -mindepth 2 -name '*.md' \
 	-not -path './node_modules/*' -not -path './$(OUTDIR)/*' | sed 's|^\./||' | sort)
 PDFS := $(patsubst %.md,$(OUTDIR)/%.pdf,$(MARKDOWNS))
 MDFLAGS := -f markdown -t beamer -s -H include.tex -V aspectratio:169 -V urlcolor:red
-HTMLFLAGS := -f markdown -t html5 -s --template index.template.html --lua-filter index.lua
+HTMLFLAGS := -f markdown -t html5 -s --template index.template.html --lua-filter index.lua \
+	--metadata title="Clean Code Slides"
 
 .PHONY: all check clean format format-check lint
 
