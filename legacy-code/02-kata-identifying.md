@@ -28,7 +28,7 @@ private:
 
 public:
     static OrderProcessor* getInstance() {
-        if (instance == null) {
+        if (instance == nullptr) {
             instance = new OrderProcessor();
         }
         return instance;

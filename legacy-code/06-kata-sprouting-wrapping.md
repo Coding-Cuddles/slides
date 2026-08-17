@@ -36,15 +36,15 @@ class UserManager:
 # Tasks
 
 1. **Sprouting (20 min)**
-   - Add a new authentication method that uses a user database or config file
-   - Do not modify the original method
+   - Add new authentication logic in a separate method that uses a user database or config file
+   - Make only the minimal change to the original method needed to call the new method
 
 2. **Wrapping (20 min)**
    - Create a wrapper that logs authentication attempts
    - Ensure the wrapper can be tested independently
 
 3. **Testing (30 min)**
-   - Write tests for both the new and legacy authentication methods
+   - Write tests for both the new method and the original authentication entry point
    - Validate that wrapping does not change legacy behavior
 
 4. **Review (20 min)**
