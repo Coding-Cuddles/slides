@@ -1,7 +1,8 @@
 OUTDIR ?= _site
 
-# Decks live in per-curriculum subdirectories; -mindepth 2 keeps README.md out.
-MARKDOWNS := $(shell find . -mindepth 2 -name '*.md' \
+# Decks live in per-curriculum subdirectories; -mindepth 2 keeps README.md out. Worksheets are
+# session handouts rather than decks, and nothing links to them.
+MARKDOWNS := $(shell find . -mindepth 2 -name '*.md' -not -name '*-worksheet.md' \
 	-not -path './node_modules/*' -not -path './$(OUTDIR)/*' | sed 's|^\./||' | sort)
 PDFS := $(patsubst %.md,$(OUTDIR)/%.pdf,$(MARKDOWNS))
 MDFLAGS := -f markdown -t beamer -s -H include.tex -V aspectratio:169 -V urlcolor:red
